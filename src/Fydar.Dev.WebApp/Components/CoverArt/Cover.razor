@@ -1,0 +1,22 @@
+<a href="@href" class="cover" style="aspect-ratio: 6 / 9">
+
+    <div class="cover-background">
+        @Background
+
+        <div class="cover-overlay">
+            @Overlay
+        </div>
+    </div>
+
+</a>
+
+@code {
+    [Parameter]
+    public RenderFragment? Background { get; set; }
+
+    [Parameter]
+    public RenderFragment? Overlay { get; set; }
+
+    [Parameter]
+    public string href { get; set; } = string.Empty;
+}

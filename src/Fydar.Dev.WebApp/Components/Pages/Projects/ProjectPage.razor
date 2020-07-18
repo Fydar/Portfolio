@@ -1,0 +1,80 @@
+@page "/portfolio/fydarnumerics"
+
+<PageTitle>Fydar.Numerics - Fydar</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="description">
+</HeadContent>
+
+<main>
+    <section class="container">
+
+        <h1>Fydar.Numerics</h1>
+
+
+
+    </section>
+</main>
+
+<!--
+string domain = $"fydar.dev";
+string url = $"https://{domain}/portfolio/{model.Slug}";
+string imageUrl = $"https://{domain}/{model.FeaturedImage}";
+
+return
+[
+    new PageMetadataItem(name: "author", content: "Anthony Marmont"),
+    new PageMetadataItem(property: "description", name: "description", content: model.Excerpt),
+
+    new PageMetadataItem(property: "og:description", content: model.Excerpt),
+    new PageMetadataItem(property: "og:title", name: "title", content: model.ProjectName),
+    new PageMetadataItem(property: "og:image", name: "image", content: imageUrl),
+    new PageMetadataItem(property: "og:image:alt", content: model.Excerpt),
+    new PageMetadataItem(property: "og:type", content: "article"),
+    new PageMetadataItem(property: "og:url", content: url),
+
+    new PageMetadataItem(name: "twitter:card", content: "summary_large_image"),
+    new PageMetadataItem(name: "twitter:title", content: model.ProjectName),
+    new PageMetadataItem(name: "twitter:description", content: model.Excerpt),
+    new PageMetadataItem(name: "twitter:image", content: imageUrl),
+    new PageMetadataItem(name: "twitter:image:alt", content: model.Excerpt),
+    new PageMetadataItem(name: "twitter:site", content: "AT Fydarus"),
+    new PageMetadataItem(name: "twitter:creator", content: "AT Fydarus"),
+    new PageMetadataItem(property: "twitter:domin", content: domain),
+    new PageMetadataItem(property: "twitter:url", content: url),
+];
+
+        string domain = $"fydar.dev";
+
+        writer.Write("<script type=\"application/ld+json\">{");
+        writer.Write("\"@context\": \"https://schema.org\",");
+        writer.Write("\"@type\": \"BreadcrumbList\",");
+        writer.Write("\"itemListElement\": [");
+
+        for (int i = 0; i < Breadcrumbs.Length; i++)
+        {
+            var breadcrumb = Breadcrumbs[i];
+
+            writer.Write("{");
+            writer.Write("\"@type\": \"ListItem\",");
+            writer.Write($"\"position\": {i + 1},");
+            writer.Write($"\"name\": \"{breadcrumb.Text}\"");
+
+            if (i != Breadcrumbs.Length - 1)
+            {
+                writer.Write(",");
+                writer.Write($"\"item\": \"https://{domain}{breadcrumb.PageUrl}\"");
+            }
+
+            writer.Write("}");
+
+            if (i != Breadcrumbs.Length - 1)
+            {
+                writer.Write(",");
+            }
+        }
+        writer.WriteLine("]}");
+        writer.Write("</script>");
+
+
+-->

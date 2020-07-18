@@ -1,0 +1,56 @@
+<div style="background-color: #edf0f3; font-family:wf_segoe-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif; letter-spacing: -0.1px; color:#333;">
+    <div style="height: 40px;"></div>
+    <table width="90%" border="0" cellpadding="10" align="center"
+           style="padding: 10px; background-color: #fff;
+          border-bottom: 2.5px solid #ddd;
+          border-right: 1px solid #ddd;
+          border-left: 1px solid #eee;
+          border-top: 1px solid #eee">
+        <tbody>
+            <tr>
+                <td>
+                    <h2 style="font-weight: normal; margin-bottom: 0;">You have new unread messages</h2>
+
+                    @{
+                        TimeZoneInfo londonTimeZone = TimeZoneInfo.FindSystemTimeZoneById("GMT Standard Time");
+                        DateTimeOffset londonTime = TimeZoneInfo.ConvertTime(Model.SubmitTime, londonTimeZone);
+
+                        string formattedString = londonTime.ToString("HH:mm dd-MM-yyyy");
+                    }
+                    <p>At <i>@formattedString</i>, a user used the <i>"@Model.FormName"</i> form.</p>
+                    <p>To view the message; use the administrator panel.</p>
+                    <p>Your new message can be found here: https://fydar.dev/ticket/@Model.TicketId</p>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <table width="100%" border="0">
+                        <thead>
+                            <tr>
+                                <td style="vertical-align: bottom">
+
+                                    <hr style="border: 0; height: 1px; background: #ccc;
+                         background-image: -webkit-linear-gradient(left, #ddd, #ccc, #ddd);
+                         background-image: -moz-linear-gradient(left, #ddd, #ccc, #ddd);
+                         background-image: -ms-linear-gradient(left, #ddd, #ccc, #ddd);
+                         background-image: -o-linear-gradient(left, #ddd, #ccc, #ddd);" />
+
+                                    <p style="font-size:13px; color: #999;">Reply with "Unsubscribe" in the subject to unsubscribe.</p>
+
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <div style="height: 40px;"></div>
+</div>
+
+@code {
+    [Parameter]
+    public ContactSubmitModel Model { get; set; } = null!;
+}

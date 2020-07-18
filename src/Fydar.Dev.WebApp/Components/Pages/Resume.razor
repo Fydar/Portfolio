@@ -1,0 +1,572 @@
+@page "/resume"
+
+@inject NavigationManager NavigationManager
+
+<PageTitle>Resume - Fydar</PageTitle>
+
+@{
+    string explicitBaseUri = "https://fydar.dev";
+
+    if (NavigationManager.BaseUri == "https://fydar.dev/")
+    {
+        explicitBaseUri = "";
+    }
+
+    explicitBaseUri = "";
+}
+
+<main class="resume">
+
+    <section class="page page-coverletter">
+
+        <p>Hi there, I am Fydar.</p>
+
+        <div style="height: 1px"></div>
+
+        <ul>
+            <li>I am a <b>programmer</b></li>
+            <li>I have <b>6 years, 9 months</b> of professional experience</li>
+            <li>I am passionate about <b>game development</b></li>
+            <li>You can find my <b>portfolio</b> of work at <b><a href="@explicitBaseUri/" target="_blank">https://fydar.dev/</a></b></li>
+        </ul>
+
+        <ul>
+            <li>
+                Experienced in shipping releases of <b>6 high-profile commercial titles</b><br />
+                <a class="link-tag" href="@explicitBaseUri/portfolio/eitr" target="_blank"><SvgSprite Link="/icons.svg#icon-game-controller-duotone" Alt="Game" />Eitr</a>
+                <a class="link-tag" href="@explicitBaseUri/portfolio/legostarwarsbattles" target="_blank"><SvgSprite Link="/icons.svg#icon-game-controller-duotone" Alt="Game" />LEGO® Star Wars™ Battles</a>
+                <a class="link-tag" href="@explicitBaseUri/portfolio/starcitizen" target="_blank"><SvgSprite Link="/icons.svg#icon-game-controller-duotone" Alt="Game" />Squadron 42</a>
+                <br />
+                <a class="link-tag" href="@explicitBaseUri/portfolio/starcitizen" target="_blank"><SvgSprite Link="/icons.svg#icon-game-controller-duotone" Alt="Game" />Star Citizen</a>
+                <a class="link-tag" href="@explicitBaseUri/portfolio/outrage" target="_blank"><SvgSprite Link="/icons.svg#icon-game-controller-duotone" Alt="Game" />OutRage</a>
+                <a class="link-tag" href="@explicitBaseUri/portfolio/southfield" target="_blank"><SvgSprite Link="/icons.svg#icon-game-controller-duotone" Alt="Game" />Southfield</a>
+            </li>
+        </ul>
+
+        <ul>
+            <li><b>Multiplayer Engineer</b> for game clients, meta-game servers, and realtime game servers</li>
+            <li><b>Systems Engineer</b> for performance-critical and complex systems</li>
+            <li><b>Tools Engineer</b> for technical art, game design, game data authoring, and asset management</li>
+            <li><b>Infrastructure Engineer</b> for distributed cloud microservices and dedicated servers</li>
+            <li><b>Network Engineer</b> for scalable realtime multiplayer games</li>
+            <li><b>Technical Artist</b> for asset pipelines and artist tooling</li>
+        </ul>
+
+        <ul>
+            <li>Strong understanding of <b>C#</b> and <b>Unity</b></li>
+            <li>Strong understanding of server programming with <b>ASP.NET Core</b></li>
+            <li>Strong understanding of <b>Blazor</b> and other web frameworks for web-based tooling</li>
+            <li>Strong understanding of <b>Substance Designer</b> and <b>PBR material workflows</b></li>
+            <li>Strong understanding of <b>HLSL</b>, <b>GLSL</b>, and <b>visual shader editors</b></li>
+            <li>Strong understanding of <b>Git</b> (<code>rebase</code>, <code>ref-log</code>, the whole lot)</li>
+        </ul>
+
+        <ul>
+            <li>Strong understanding of <b>Docker</b> and <b>Kubernetes</b></li>
+            <li>Strong understanding of <b>Jenkins</b>, <b>GitHub Actions</b> and other <b>CI/CD platforms</b></li>
+            <li>Strong understanding of <b>Azure</b> and <b>AWS</b></li>
+            <li>Strong understanding of <b>IaC</b> (Infrastructure as Code, e.g. <i>AWS CloudFormation</i>)</li>
+            <li>Strong understanding of <b>Advanced Vector Mathematics</b> and <b>Procedural Generation</b></li>
+        </ul>
+
+        <ul>
+            <li>Proven experience working with implementing <b>UI</b> and <b>UX</b> in collaboration with artists and designers</li>
+            <li>Proven experience working with realtime web technologies; <b>TCP</b>, <b>UDP</b>, <b>QUIC</b>, <b>WebTransport</b>, and <b>WebSockets</b></li>
+            <li>Proven experience working with RESTful web technologies; <b>HTTP</b>, <b>stateless infrastructure</b>, and <b>microservices</b></li>
+            <li>Proven experience working with database technologies; <b>SQL</b>, <b>NoSQL</b>, <b>Document</b>, and <b>Graph</b></li>
+            <li>Proven experience working with secure coding practices and conducting <b>Cybersecurity</b> assessments.</li>
+        </ul>
+
+        <ul>
+            <li>Proven experience with large-scale <b>network and infrastructure</b> on <b>two high-profile commercial titles</b></li>
+            <li>Proven experience with operating <b>live-ops</b> on the mobile <b>realtime strategy</b></li>
+            <li>Proven experience with a <b>feature leadership</b> role and managing development teams</li>
+            <li>Proven experience with <b>project management</b> using <b>agile</b> methodologies (<b>Scrum</b> and <b>Kanban</b>)</li>
+            <li>Proven experience with <b>mentoring</b> and <b>coaching</b> colleagues</li>
+        </ul>
+
+        <div style="height: 2px"></div>
+
+        <p>For your consideration,</p>
+
+        <p>Anthony <i>'Fydar'</i> Marmont<br /><span style="font-size: 0.75em;">(they/them)</span></p>
+
+        <div style="height: 4px"></div>
+
+        <ul class="footer-externallinks" aria-label="More External links" dir="ltr">
+            <li class="nav-siteicon"><a href="@explicitBaseUri/" target="_blank"><SvgSprite Link="/icons.svg#icon-fydar-round" Alt="Fydar’s Portfolio Website" /></a></li>
+            <li class="nav-siteicon"><a href="https://github.com/Fydar" target="_blank"><SvgSprite Link="/icons.svg#icon-github" Alt="GitHub" /></a></li>
+            <li class="nav-siteicon"><a href="https://www.linkedin.com/in/fydar" target="_blank"><SvgSprite Link="/icons.svg#icon-linkedin" Alt="LinkedIn" /></a></li>
+            <li class="nav-siteicon"><a href="https://www.youtube.com/@@fydar" target="_blank"><SvgSprite Link="/icons.svg#icon-youtube" Alt="YouTube" /></a></li>
+            <li class="nav-siteicon"><a href="https://twitter.com/Fydarus" target="_blank"><SvgSprite Link="/icons.svg#icon-twitter" Alt="Twitter" /></a></li>
+            <li class="nav-siteicon"><a href="https://fydar.itch.io/" target="_blank"><SvgSprite Link="/icons.svg#icon-itchdotio" Alt="Itch.io" /></a></li>
+        </ul>
+    </section>
+
+    <section class="page page-experience">
+
+        <h1>Professional Experience</h1>
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo">
+                <picture>
+                    <img src="/media/companies/radicalforge/logo_200x200.jpg" alt="The logo for 'Radical Forge'.">
+                </picture>
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>Radical Forge</h2>
+                <p class="subtitle2">Full-time · AA · 1 year, 7 months</p>
+                <p class="subtitle3">Middlesbrough, England, United Kingdom · Remote</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/southfield" class="timeline-company-media">
+                <img src="/media/southfield/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Southfield'." />
+                <div class="timeline-company-media-body">
+                    <p class="timeline-company-media-body-name">Southfield</p>
+                    <p class="timeline-company-media-body-description">Weird farming meets silly physics, combine crops with unpredictable effects, build your dream farmstead, and experiment with automation.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Senior Tools Programmer</h3>
+                <p class="subtitle4">September 2022 – March 2024 · 1 yr, 7 mos</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>I made many tools to empower artists by automating parts of their previous workflows; chief amongst which were tools for the automation of <b>screenshot capture</b> for <b>icon generation</b>, <b>gradient recolouring</b>, <b>texture atlasing</b>, <b>level design tools for terrains</b>, <b>texture generation</b>, and <b>procedural generation</b>.</p>
+
+                <p>I represented Radical Forge at <b>EGX 2023</b> on a <a href="https://www.gamesindustry.biz/" target="_blank">GamesIndustry.biz</a> panel called <a href="https://www.gamesindustry.biz/technical-art-roles-what-they-are-and-how-to-get-one" target="_blank"><b>'Technical art roles: What they are, and how to get one'</b></a>.</p>
+            </div>
+
+        </div>
+
+
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo">
+                <SvgSprite Link="/icons.svg#icon-hardballgames" Alt="The logo for 'Hardball Games'." />
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>Hardball Games</h2>
+                <p class="subtitle2">Full-time · AA · 3 months</p>
+                <p class="subtitle3">Brighton, United Kingdom · Hybrid</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/outrage" target="_blank" class="timeline-company-media">
+                <img src="/media/outrage/capsule_350x200.jpg" alt="Landscape promotional material for the game 'OutRage: Fight Fest'." />
+                <div class="timeline-company-media-body">
+                    <p class="timeline-company-media-body-name">OutRage: Fight Fest</p>
+                    <p class="timeline-company-media-body-description">A 16-player beat-em-up brawler with a sandbox of attacks, weapons, and destructible props in Battle Royale Free for All and Team-based game modes.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Senior Programmer</h3>
+                <p class="subtitle4">April 2022 – June 2022 · 3 mos</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>I implemented <b>gameplay</b> features to enhance the combat experience in the game, such as picking up and throwing props.</p>
+
+                <p>I was able to work with <a href="https://www.photonengine.com/quantum" target="_blank"><b>Photon Quantum</b></a>, a <b>deterministic</b> <b>entity-component system</b>, which inspired me to work on my own implementation of an <b>ECS</b> that utilises the <b>latest C# language features</b>.</p>
+            </div>
+
+        </div>
+
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo">
+                <SvgSprite Link="/icons.svg#icon-cloudimperiumgames" Alt="The logo for 'Cloud Imperium Games'." />
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>Cloud Imperium Games</h2>
+                <p class="subtitle2">Full-time · AAA · 1 years, 8 months</p>
+                <p class="subtitle3">Wilmslow, United Kingdom · Remote</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/starcitizen" target="_blank" class="timeline-company-media">
+                <img src="/media/starcitizen/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Star Citizen'." />
+                <div class="timeline-company-media-body">
+                    <p class="timeline-company-media-body-name">Star Citizen</p>
+                    <p class="timeline-company-media-body-description">A next-generation AAA massively multiplayer online sandbox of life-size planets, moons, cities, space stations, asteroid belts, and more.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Tools Programmer</h3>
+                <p class="subtitle4">September 2020 – April 2022 · 1 yrs 8 mos</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>Programmer on standalone (out-of-engine) tools using C# for <i><a href="@explicitBaseUri/portfolio/starcitizen" target="_blank">‘Star Citizen’</a></i> and <i><a href="@explicitBaseUri/portfolio/starcitizen">‘Squadron 42’</a></i>.</p>
+
+                <p>My primary assignment was creating and maintaining a bespoke asset management solution with asset dependency visualisation and change tracker.</p>
+
+                <p>I also maintained a large pre-existing codebase for game-data authoring, along with maintaining core gameplay code in <b>C++</b>.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="page page-projects">
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo">
+                <picture>
+                    <img src="/media/companies/ttgames/logo.png" alt="The logo for 'TT Games'.">
+                </picture>
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>TT Games</h2>
+                <p class="subtitle2">Full-time · AA · 2 years, 3 months</p>
+                <p class="subtitle3">Brighton, United Kingdom · On-site</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/legostarwarsbattles" target="_blank" class="timeline-company-media">
+                <img src="/media/legostarwarsbattles/capsule_350x200.jpg" alt="Landscape promotional material for the game 'LEGO® Star Wars™ Battles'." />
+                <div class="timeline-company-media-body">
+                    <p class="timeline-company-media-body-name">LEGO® Star Wars™ Battles</p>
+                    <p class="timeline-company-media-body-description">A mobile multiplayer realtime strategy game featuring competative ranked matchmaking, weekly leaderboards, and clans.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Game Programmer</h3>
+                <p class="subtitle4">May 2019 – September 2020 · 1 yr 5 mos</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>Full-Stack games developer in <b>C#</b> (.NET Core and Unity) on the mobile title <i><a href="@explicitBaseUri/portfolio/legostarwarsbattles" target="_blank">‘LEGO® Star Wars™ Battles’</a></i>.</p>
+
+                <p>I was personally responsible for the creation and release of the servers and databases for <b>clans</b> and <b>leaderboards</b>.</p>
+            </div>
+
+            <div class="timeline-position">
+                <h3>Junior Programmer</h3>
+                <p class="subtitle4">July 2018 – May 2019 · 10 mos</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>Gameplay programmer in <b>C#</b> (Unity) on the mobile title <i><a href="@explicitBaseUri/portfolio/legostarwarsbattles" target="_blank">‘LEGO® Star Wars™ Battles’</a></i>.</p>
+
+                <p>When I first joined the team, I worked primarily on gameplay. I created the <b>data delivery mechanisms</b>, <b>configuration system</b>, and <b>unit AI</b>. I also created helpful tools for <b>saved game data management</b>, <b>profile management</b>, and <b>network debugging</b>.</p>
+            </div>
+
+        </div>
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo">
+                <picture>
+                    <img src="/media/companies/enemeentertainment/enemeentertainment-logo.png" alt="The logo for 'Eneme Entertainment'." style="image-rendering: pixelated; background-color: black;">
+                </picture>
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>Eneme Entertainment</h2>
+                <p class="subtitle2">Full-time · Indie · 1 year</p>
+                <p class="subtitle3">London, United Kingdom · Remote</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/eitr" target="_blank" class="timeline-company-media">
+                <img src="/media/eitr/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Eitr'." />
+                <div class="timeline-company-media-body">
+                    <p class="timeline-company-media-body-name">Eitr</p>
+                    <p class="timeline-company-media-body-description">A soulslike RPG built around exceptional combat and formidable challenges set within a mythological Norse world.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Programmer</h3>
+                <p class="subtitle4">July 2017 – July 2018 · 1 yr</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>I joined the indie title <i><a href="@explicitBaseUri/portfolio/eitr" target="_blank">‘Eitr’</a></i> team as a remote programmer. I programmed many core gameplay systems such as the <b>inventory system</b>, <b>item system</b>, <b>tooltips</b>, <b>character stats</b>, <b>skill trees</b>, <b>input mapping</b>, and <b>achievements</b>.</p>
+
+                <p>Programming on <i><a href="@explicitBaseUri/portfolio/eitr">‘Eitr’</a></i> inspired my <i><a href="@explicitBaseUri/portfolio/rpgcore">RPGCore</a></i> open-source project.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="page page-projects">
+
+        <h1>Education</h1>
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo">
+                <SvgSprite Link="/icons.svg#icon-brightonmet-solid" Alt="The logo for 'Brighton MET'." />
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>Brighton MET</h2>
+                <p class="subtitle3">Worthing, United Kingdom</p>
+            </div>
+
+            <div class="timeline-position">
+                <h3>Extended Diploma in Games Development</h3>
+                <p class="subtitle2">2017 – 2018 · Distinction</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>It was towards the end of this course that I started my work at 'Eneme Entertainment' on the indie title 'Eitr'.</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/thedwellers" target="_blank" class="timeline-position-media">
+                <img src="/media/thedwellers/capsule_350x200.jpg" alt="Landscape promotional material for the game 'The Dwellers'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">The Dwellers</p>
+                    <p class="timeline-position-media-body-description">A dungeon crawler with a powerful node-based editor for the RPG system.</p>
+                </div>
+            </a>
+
+            <a href="@explicitBaseUri/portfolio/voxelmultiplayer" target="_blank" class="timeline-position-media">
+                <img src="/media/voxelmultiplayer/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Voxel Multiplayer'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">Voxel Multiplayer</p>
+                    <p class="timeline-position-media-body-description">Fully bespoke voxel rendering system to create a 'Cube World' style game with a multiplayer component.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Diploma in Games Development</h3>
+                <p class="subtitle2">2016 – 2017 · Distinction</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>I joined this course with a strong understanding of game development and programming from my hobbyist experience. This course offered me the freedom to explore programming concepts at my speed. I also had the opportunity to learn the fundamentals of 2D and 3D art.</p>
+
+                <p>I became familiar with 3DS Max which became my tool of choice. This benefited my understanding of 3D graphics greatly. The 3D artistry later inspired my exploration of Substance Designer and other tech art tools.</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/thenewearthconflict" target="_blank" class="timeline-position-media">
+                <img src="/media/thenewearthconflict/capsule_350x200.jpg" alt="Landscape promotional material for the game 'The New Earth Conflict'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">The New Earth Conflict</p>
+                    <p class="timeline-position-media-body-description">A realtime space strategy game where the player takes the pilot seat of a battleship.</p>
+                </div>
+            </a>
+
+            <a href="@explicitBaseUri/portfolio/cryptcrawl" target="_blank" class="timeline-position-media">
+                <img src="/media/cryptcrawl/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Crypt Crawl'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">Crypt Crawl</p>
+                    <p class="timeline-position-media-body-description">A pixel art dungeon crawler with dungeon textures generated in Substance Designer.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="page page-experience">
+
+        <h1>Game Jams</h1>
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo" style="background-color: #aec159; padding: 4pt; border-radius: 2pt;">
+                <SvgSprite Link="/icons.svg#icon-gbjam" Alt="The logo for 'GBJAM'." />
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>GBJAM</h2>
+                <p class="subtitle3">Once Annually · 1 week</p>
+            </div>
+
+            <div class="timeline-position">
+                <h3>GBJAM 8</h3>
+                <p class="subtitle2">September 2022 · Solo</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>I can't remember why I finally decided on the project idea, but once I did, the first thing I made was a <b>shader</b> that could emulate the style and feel of a Game Boy game. I then used <b>Pyxel Edit</b> to create the pixel art tilesets used for the character, terrain, and mining minigame. </p>
+
+                <p>I especially enjoyed creating the <b>procedural generation</b> systems to firstly create the maps and then scatter minable resources underneath the rock. I created the entire game using a single entrypoint, as opposed to the <b>Unity</b> component based <b>IoC</b> (inversion of control).</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/miniminer" target="_blank" class="timeline-position-media">
+                <img src="/media/miniminer/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Mini Miner'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">Mini Miner</p>
+                    <p class="timeline-position-media-body-description">The Game Boy demake of the Nintendo DS <i>Pokémon Diamond and Pearl</i> underground mining minigame.</p>
+                </div>
+            </a>
+
+        </div>
+
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo">
+                <SvgSprite Link="/icons.svg#icon-ludumdare" Alt="The logo for 'Ludum Dare'." />
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>Ludum Dare</h2>
+                <p class="subtitle3">Twice Annually · 48 hours</p>
+            </div>
+
+            <div class="timeline-position">
+                <h3>Ludum Dare 46 Compo</h3>
+                <p class="subtitle2">April 2020 · Themed 'Keep it alive' · Solo</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>Upon hearing the theme 'Keep it alive' I immediately recalled my days playing the "Healer" in MMORPG raids and wanted to create a UI-only version of my experiences.</p>
+
+                <p>I also explored new scripting methods to create <b>abilities</b> in RPG games, as I wanted to be able to create a system that would allow me to add multiple unique ways of healing your allies.</p>
+
+                <p>I'm very proud of the overall experience, primarily because of it’s difficulty. It may take several playthroughs to complete, but it is doable once you know what you are down.</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/raidhealersimulator" target="_blank" class="timeline-position-media">
+                <img src="/media/raidhealersimulator/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Raid Healer Simulator'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">Raid Healer Simulator</p>
+                    <p class="timeline-position-media-body-description">The simulation experience of what it’s like to be a healer in an MMORPG raid, complete with a variety of abilities and a challenging boss battle.</p>
+                </div>
+            </a>
+
+        </div>
+
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo" style="background-color: #13171a; padding: 8pt; border-radius: 2pt;">
+                <SvgSprite Link="/icons.svg#icon-astralelites" Alt="The logo for 'Astral Elites'." />
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>Code Tests</h2>
+                <p class="subtitle3">One off · 8 hours</p>
+            </div>
+
+            <div class="timeline-position">
+                <h3>Asteroids Clone</h3>
+                <p class="subtitle2">July 2018 · Solo</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>For this Asteroids clone, the first thing I implemented was <b>procedurally generated asteroid meshes</b>. I then utilised Unity’s 2D physics engine to fling those asteroids into the centre of the arena.</p>
+
+                <p>After the code test concluded, I added Discord integration via the <b>Discord SDK</b>.</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/astralelites" target="_blank" class="timeline-position-media">
+                <img src="/media/astralelites/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Astral Elites'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">Astral Elites</p>
+                    <p class="timeline-position-media-body-description">The physics-based and fast-paced asteroid clone for the modern era, complete with Discord integration.</p>
+                </div>
+            </a>
+
+        </div>
+
+
+    </section>
+    
+    <section class="page page-experience">
+
+        <div class="timeline-company">
+
+            <div class="timeline-company-logo" style="background-color: #252260; padding: 6pt; border-radius: 50%;">
+                <SvgSprite Link="/icons.svg#icon-globalgamejam" Alt="The logo for 'Global Game Jam'." />
+            </div>
+
+            <div class="timeline-company-summary">
+                <h2>Global Game Jam</h2>
+                <p class="subtitle3">Once Annually · 48 hours</p>
+            </div>
+
+            <div class="timeline-position">
+                <h3>Global Game Jam 2021</h3>
+                <p class="subtitle2">January 2021 · Themed 'Lost and Found' · Solo</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>I was inspired by <b>Agar.io</b> and other in-browser multiplayer games create my own ".io" style game. To do so, I used <b>Blazor WebAssembly</b> to create a realtime game client that connects to an <b>ASP.NET Core</b> server via <b>WebSockets</b>.</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/pewpew" target="_blank" class="timeline-position-media">
+                <img src="/media/pewpew/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Pew Pew'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">Pew Pew</p>
+                    <p class="timeline-position-media-body-description">Coordinate with your team in a multiplayer space-shooter.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Global Game Jam 2020</h3>
+                <p class="subtitle2">January 2020 · Themed 'Repair' · Team of 3</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>For this Global Game Jam, I decided to meet up with some co-workers from TT Games. We were inspired by games like <a href="https://littlealchemy.com/">'Little Alchemy'</a> where the player has to combine elements together to discover new elements, and <a href="https://www.nintendo.co.uk/Games/Nintendo-Switch-games/Animal-Crossing-New-Horizons-1438623.html">'Animal Crossing: New Horizons'</a> to create a game where you create the life to populate a desolate world.</p>
+
+                <p>We worked in <b>Unity</b>, where I created the <b>inventory</b>, <b>crafting</b>, and <b>world interaction</b> systems, along with the shader to warp the world over the horizon.</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/snoot" target="_blank" class="timeline-position-media">
+                <img src="/media/snoot/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Snoot'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">Snoot</p>
+                    <p class="timeline-position-media-body-description">Restore life to a desolate world by exploring a sandbox of crafting recipes. On your adventure you will bring rain, grass, bugs, birds, and bees.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Global Game Jam 2019</h3>
+                <p class="subtitle2">January 2019 · Themed 'Home' · Team of 6</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>For this Global Game Jam, I connect with a team of developers from all over the industry. After a chaotic and fun ideas generation session, we decided to make a game that emulates the experience of digging around in the cracks of your sofa.</p>
+
+                <p>I implemented a <b>tutorial system</b> to introduce the players to the mechanics and a <b>dialogue system</b> that would guide players through the interactive experience.</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/sofarfromhome" target="_blank" class="timeline-position-media">
+                <img src="/media/sofarfromhome/capsule_350x200.jpg" alt="Landscape promotional material for the game 'So Far from Home'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">So Far from Home</p>
+                    <p class="timeline-position-media-body-description">Searching between the sofa cushions for a missing key, but what else is down there? Uncover memories from a time well spent.</p>
+                </div>
+            </a>
+
+            <div class="timeline-position">
+                <h3>Global Game Jam 2018</h3>
+                <p class="subtitle2">January 2018 · Themed 'Transmission' · Team of 5</p>
+            </div>
+
+            <div class="timeline-position-details">
+                <p>For this Global Game Jam, I went to the Unity office in Brighton and formed a team. This was my first game jam in a team, and it’s an experience I will never forget. We decided to create a game where the player would remote control a drone via a spacestation CCTV system.</p>
+
+                <p>I implemented the <b>character controller</b>, <b>camera controllers</b>, <b>glitching UI</b>, and <b>transitions between cameras</b>.</p>
+            </div>
+
+            <a href="@explicitBaseUri/portfolio/lostinstatic" target="_blank" class="timeline-position-media">
+                <img src="/media/lostinstatic/capsule_350x200.jpg" alt="Landscape promotional material for the game 'Lost in Static'." />
+                <div class="timeline-position-media-body">
+                    <p class="timeline-position-media-body-name">Lost in Static</p>
+                    <p class="timeline-position-media-body-description">As an evil AI runs rampant on a space station, it is up to you to control a drone capable of shutting her down.</p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+
+</main>

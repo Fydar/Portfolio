@@ -1,0 +1,20 @@
+
+/* Cover grids */
+.cover-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3rem 3rem;
+    margin: 3rem 0;
+}
+
+    .cover-grid.cover-grid-md {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cover-grid.cover-grid-sm {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cover-grid.cover-grid-xs {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }

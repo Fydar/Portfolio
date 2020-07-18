@@ -1,0 +1,291 @@
+
+/* Cards */
+.card {
+    position: relative;
+    display: flex;
+    place-content: flex-end;
+    flex-direction: column;
+    text-decoration: none;
+    border-radius: 24px;
+    padding: 1.75px;
+    transition: box-shadow 0.15s;
+    --pointer-relative: -10000px -10000px;
+    width: fit-content;
+}
+
+    .card .card-hover {
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+        pointer-events: none;
+    }
+
+    .card:hover .card-hover {
+        opacity: 1;
+    }
+
+    .card.pointer-none .card-border-secondary,
+    .card.pointer-none .card-border-primary {
+        opacity: 0;
+    }
+
+    .card:focus {
+        outline: 0;
+    }
+
+        .card:focus .card-hover {
+            opacity: 1;
+        }
+
+        .card:focus.pointer-none .card-border-secondary,
+        .card:focus.pointer-none .card-border-primary {
+            opacity: 1;
+        }
+
+        .card:focus .card-outerglow .card-outerglow-tl,
+        .card:focus .card-outerglow .card-outerglow-t,
+        .card:focus .card-outerglow .card-outerglow-tr,
+        .card:focus .card-outerglow .card-outerglow-ml,
+        .card:focus .card-outerglow .card-outerglow-m,
+        .card:focus .card-outerglow .card-outerglow-mr,
+        .card:focus .card-outerglow .card-outerglow-bl,
+        .card:focus .card-outerglow .card-outerglow-b,
+        .card:focus .card-outerglow .card-outerglow-br {
+            background: var(--glow-start);
+        }
+
+        .card:focus .card-border-primary {
+            background: radial-gradient(350px 350px at var(--pointer-fixed), #ffffff 0, #e2b384 40%);
+            background-attachment: fixed;
+        }
+
+
+    /* Containers */
+    .card ::deep.card-container {
+        padding: 2.5rem 1.35rem 1.5rem 1.35rem;
+        /*background: linear-gradient(to bottom, #16161800 0, #16161870 2.25rem, #16161880 100%);*/
+        border-bottom-right-radius: 24px;
+        border-bottom-left-radius: 24px;
+    }
+
+    .card ::deep.card-button {
+        padding: 1rem;
+    }
+
+        .card ::deep.card-button h3 {
+            margin: 0;
+        }
+
+        .card ::deep.card-button .card-keyicon {
+            width: 28px;
+            height: 28px;
+            min-width: 28px;
+            padding: 0px 8px 0px 0px;
+        }
+
+    /* Key icons */
+    .card ::deep.card-keyicon {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        padding: 2px 0.825rem 2px 2px;
+        color: white;
+        transition: filter 0.15s ease-in-out;
+    }
+
+    .card:hover ::deep.card-keyicon,
+    .card:focus ::deep.card-keyicon {
+        filter: drop-shadow(0 0 1px #ffffff60) drop-shadow(0 0 6px #e2b384);
+    }
+
+    /* Card headers */
+    .card ::deep.card-header {
+        flex-grow: 0;
+        padding: 0;
+        margin: 0 0 0.625rem 0;
+        font-size: 1.4375rem;
+        font-weight: 350;
+        letter-spacing: 1px;
+        color: var(--color-text-primary);
+        font-feature-settings: "ss03" 1;
+        line-height: 1.25;
+    }
+
+        .card ::deep.card-header span.subtle {
+            font-size: 1.4375rem;
+            letter-spacing: 1px;
+            color: #ffffffa0;
+            font-weight: 300;
+            letter-spacing: 1.5px;
+        }
+
+    .card ::deep.card-description {
+        flex-grow: 1;
+        padding: 0;
+        margin: 0;
+        padding: 0;
+        color: var(--color-text-primary);
+        margin-top: 5px;
+        font-size: 17px;
+        line-height: 1.45;
+        letter-spacing: 0.075px;
+        text-align: left;
+    }
+
+        .card ::deep.card-description b {
+            font-weight: 500;
+        }
+
+    /* Card images */
+    .card ::deep.card-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1.75px;
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 100%;
+        opacity: 0.2;
+        filter: grayscale(1);
+        border-radius: 24.75px;
+        object-fit: cover;
+        aspect-ratio: 3/2;
+        z-index: -1;
+    }
+
+    /* Glow */
+    .card .card-outerglow {
+        --glow-start: #e2b38430;
+        --glow-end: #e2b38400;
+        --glow-rounded-radius: 25px;
+        --glow-distance: 40px;
+    }
+
+        .card .card-outerglow .card-outerglow-tl,
+        .card .card-outerglow .card-outerglow-t,
+        .card .card-outerglow .card-outerglow-tr,
+        .card .card-outerglow .card-outerglow-ml,
+        .card .card-outerglow .card-outerglow-m,
+        .card .card-outerglow .card-outerglow-mr,
+        .card .card-outerglow .card-outerglow-bl,
+        .card .card-outerglow .card-outerglow-b,
+        .card .card-outerglow .card-outerglow-br {
+            position: absolute;
+            pointer-events: none;
+            background: radial-gradient(500px 500px at var(--pointer-fixed), var(--glow-start) 0, var(--glow-end) 100%);
+            background-attachment: fixed;
+        }
+
+
+
+        /* Corners */
+        .card .card-outerglow .card-outerglow-tl,
+        .card .card-outerglow .card-outerglow-tr,
+        .card .card-outerglow .card-outerglow-bl,
+        .card .card-outerglow .card-outerglow-br {
+            width: calc(var(--glow-distance) + var(--glow-rounded-radius));
+            height: calc(var(--glow-distance) + var(--glow-rounded-radius));
+        }
+
+        .card .card-outerglow .card-outerglow-tl {
+            top: calc(var(--glow-distance) * -1);
+            left: calc(var(--glow-distance) * -1);
+            mask: radial-gradient(circle at bottom right, transparent var(--glow-rounded-radius), white var(--glow-rounded-radius), #5555 calc(var(--glow-rounded-radius) + (var(--glow-distance) * 0.5)), transparent calc(var(--glow-rounded-radius) + var(--glow-distance)));
+        }
+
+        .card .card-outerglow .card-outerglow-tr {
+            top: calc(var(--glow-distance) * -1);
+            right: calc(var(--glow-distance) * -1);
+            mask: radial-gradient(circle at bottom left, transparent var(--glow-rounded-radius), white var(--glow-rounded-radius), #5555 calc(var(--glow-rounded-radius) + (var(--glow-distance) * 0.5)), transparent calc(var(--glow-rounded-radius) + var(--glow-distance)));
+        }
+
+        .card .card-outerglow .card-outerglow-bl {
+            bottom: calc(var(--glow-distance) * -1);
+            left: calc(var(--glow-distance) * -1);
+            mask: radial-gradient(circle at top right, transparent var(--glow-rounded-radius), white var(--glow-rounded-radius), #5555 calc(var(--glow-rounded-radius) + (var(--glow-distance) * 0.5)), transparent calc(var(--glow-rounded-radius) + var(--glow-distance)));
+        }
+
+        .card .card-outerglow .card-outerglow-br {
+            bottom: calc(var(--glow-distance) * -1);
+            right: calc(var(--glow-distance) * -1);
+            mask: radial-gradient(circle at top left, transparent var(--glow-rounded-radius), white var(--glow-rounded-radius), #5555 calc(var(--glow-rounded-radius) + (var(--glow-distance) * 0.5)), transparent calc(var(--glow-rounded-radius) + var(--glow-distance)));
+        }
+
+        /* Straight Edges */
+        .card .card-outerglow .card-outerglow-ml {
+            top: var(--glow-rounded-radius);
+            bottom: var(--glow-rounded-radius);
+            left: calc(var(--glow-distance) * -1);
+            width: var(--glow-distance);
+            mask: linear-gradient(to left, white, #5555 50%, transparent);
+        }
+
+        .card .card-outerglow .card-outerglow-mr {
+            top: var(--glow-rounded-radius);
+            bottom: var(--glow-rounded-radius);
+            right: calc(var(--glow-distance) * -1);
+            width: var(--glow-distance);
+            mask: linear-gradient(to right, white, #5555 50%, transparent);
+        }
+
+        .card .card-outerglow .card-outerglow-t {
+            top: calc(var(--glow-distance) * -1);
+            left: var(--glow-rounded-radius);
+            right: var(--glow-rounded-radius);
+            height: var(--glow-distance);
+            mask: linear-gradient(to top, white, #5555 50%, transparent);
+        }
+
+        .card .card-outerglow .card-outerglow-b {
+            bottom: calc(var(--glow-distance) * -1);
+            left: var(--glow-rounded-radius);
+            right: var(--glow-rounded-radius);
+            height: var(--glow-distance);
+            mask: linear-gradient(to bottom, white, #5555 50%, transparent);
+        }
+
+    /* Overlapping Effects */
+    .card .card-border-subtle,
+    .card .card-border-secondary,
+    .card .card-border-primary,
+    .card .card-background-subtle-secondary,
+    .card .card-background-secondary,
+    .card .card-background-primary {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 1.75px;
+        box-sizing: border-box;
+        pointer-events: none;
+    }
+
+    .card .card-border-secondary,
+    .card .card-border-primary {
+        mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+        -webkit-mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+    }
+
+    .card .card-border-subtle {
+        transition: opacity 0.15s ease-in-out;
+        border-radius: 24px;
+        border: 2px solid #ffffff14;
+    }
+
+    .card .card-border-secondary {
+        transition: opacity 0.15s ease-in-out;
+        background: radial-gradient(250px 250px at var(--pointer-fixed), #e2b384 0, transparent 100%);
+        background-attachment: fixed;
+        border-radius: 24px;
+    }
+
+    .card .card-border-primary {
+        transition: opacity 0.15s ease-in-out;
+        background: radial-gradient(350px 350px at var(--pointer-fixed), #ffffff 0, #e2b384 40%, #3e3934 100%);
+        background-attachment: fixed;
+        border-radius: 24px;
+    }

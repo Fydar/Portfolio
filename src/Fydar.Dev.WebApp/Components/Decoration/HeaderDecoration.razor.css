@@ -1,0 +1,33 @@
+
+.header {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+    .header ::deep h1,
+    .header ::deep h2,
+    .header ::deep h3,
+    .header ::deep h4,
+    .header ::deep h5 {
+        margin: 0;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: -0.022px;
+        margin: auto;
+        background: linear-gradient(124.31deg, #e2b384 0.18%, #cf8d4c 89.2%) text;
+        /* background: linear-gradient(124.31deg, rgb(70, 227, 183) 0.18%, rgb(82, 124, 172) 89.2%) text; */
+        -webkit-box-decoration-break: clone;
+        -webkit-text-fill-color: transparent;
+        color: unset;
+        display: inline-block;
+    }
+
+        .header ::deep h1::selection,
+        .header ::deep h2::selection,
+        .header ::deep h3::selection,
+        .header ::deep h4::selection,
+        .header ::deep h5::selection {
+            background: #e2b38465;
+        }

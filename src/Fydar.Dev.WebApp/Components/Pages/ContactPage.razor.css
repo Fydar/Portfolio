@@ -1,0 +1,271 @@
+* {
+    /* Typography */
+    --color-text-primary: #d8d8d8;
+    --color-text-headings: #e1e4e8;
+    --color-text-subtitles: #afb0b1;
+    --color-text-subtle-1: #d8d8d8;
+    --color-text-subtle-2: #4a4a4a;
+    --color-text-subtle-3: #6c757d;
+    --color-text-subtle-4: #999999;
+    --color-text-link: #8799ed;
+    --color-text-error: #ff4456;
+    /* Borders */
+    --color-border-1: #242628;
+    --color-border-2: #2d2f31;
+    --color-border-select-1: #007bff40;
+    --color-border-select-2: #80bdff;
+    --color-border-error-1: #dc354540;
+    --color-border-error-2: #dc3545;
+    /* Form */
+    --color-form-background-autocorrect: #1c1c1f;
+    /* Backgrounds */
+    --color-background-1: rgb(25, 28, 38);
+    --color-background-2: #0d0d0d;
+    --color-background-3: #0d0d0d;
+    --color-background-4: #242628;
+    --color-background-5: #0c0c0c;
+    --color-background-footer: #202129;
+    /* Grey */
+    --color-grey-5: #202020;
+    --color-grey-6: #444444;
+    /* Green */
+    --color-green-1: #255325;
+    --color-green-6: #64b860;
+    --color-green-8: #a0ed9b;
+    /* Orange */
+    --color-orange-1: #40251c;
+    --color-orange-6: #f78e6b;
+    --color-orange-7: #f2840f;
+    --color-orange-8: #fed7b5;
+}
+
+h2 {
+    margin-top: 6rem;
+}
+
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9em;
+    letter-spacing: 2px;
+    margin: 0.6rem 0 0.5rem 0;
+}
+
+p {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+::deep .robotsonly {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+    display: block;
+}
+
+
+::deep .form-control {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    caret-color: var(--color-text-subtle-1);
+    color: var(--color-text-subtle-1);
+    background: none;
+    background-clip: content-box;
+    border: 1px solid var(--color-border-2);
+    border-radius: 8px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,background .15s ease-in-out;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    box-shadow: 0 0 0 500px var(--color-background-1) inset, 0 0 0 0 var(--color-border-select-1);
+}
+
+    ::deep .form-control:focus {
+        background: none;
+        background-clip: content-box;
+        outline: 0;
+        border: 1px solid var(--color-border-select-2);
+        color: var(--color-text-subtle-1);
+        box-shadow: 0 0 0 500px var(--color-background-1) inset, 0 0 0 5px var(--color-border-select-1);
+    }
+
+    ::deep .form-control:-webkit-autofill {
+        background: none;
+        background-clip: content-box;
+        -webkit-text-fill-color: var(--color-text-subtle-1) !important;
+        box-shadow: 0 0 0 500px var(--color-form-background-autocorrect) inset, 0 0 0 0 var(--color-border-select-1);
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1rem;
+    }
+
+        ::deep .form-control:-webkit-autofill::first-line {
+            background: none;
+            background-clip: content-box;
+            -webkit-text-fill-color: var(--color-text-subtle-1) !important;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+            font-size: 1rem;
+        }
+
+        ::deep .form-control:-webkit-autofill:focus {
+            background: none;
+            background-clip: content-box;
+            box-shadow: 0 0 0 500px var(--color-form-background-autocorrect) inset, 0 0 0 5px var(--color-border-select-1);
+        }
+
+    ::deep .form-control:user-invalid,
+    ::deep .form-control.invalid {
+        box-shadow: 0 0 0 500px var(--color-background-1) inset, 0 0 0 0 var(--color-border-error-1);
+        border: 1px solid var(--color-border-error-2);
+        padding-right: calc(1.5em + .75rem);
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right calc(.375em + .1875rem) center;
+        background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+    }
+
+        ::deep .form-control:user-invalid:focus,
+        ::deep .form-control.invalid:focus {
+            border-color: var(--color-border-error-2);
+            box-shadow: 0 0 0 500px var(--color-background-1) inset, 0 0 0 5px var(--color-border-error-1);
+        }
+
+::deep .feedback {
+    display: block;
+    width: 100%;
+    margin-top: .4rem;
+    font-size: 12.6px;
+    color: var(--color-text-error);
+    opacity: 0;
+    transition: opacity ease-in-out 0.1s;
+}
+
+::deep .form-group:has(*:user-invalid) .feedback {
+    opacity: 1;
+}
+
+::deep .form-group:has(*:required) label::after {
+    content: "*";
+    color: #ff4456;
+    padding-left: 2px;
+    display: inline-block;
+    font-size: 1.2em;
+    line-height: 1em;
+}
+
+/* If it's required and it's empty, show the required message */
+::deep .feedback .feedback-required {
+    display: none;
+}
+
+::deep .form-group:has(*:user-invalid):has(*:required):has(textarea:placeholder-shown) .feedback .feedback-required,
+::deep .form-group:has(*:user-invalid):has(*:required):has(input:placeholder-shown) .feedback .feedback-required {
+    display: block;
+}
+
+::deep .form-group:has(*:user-invalid):has(*:required):has(textarea:placeholder-shown) .feedback .feedback-invalid,
+::deep .form-group:has(*:user-invalid):has(*:required):has(input:placeholder-shown) .feedback .feedback-invalid {
+    display: none;
+}
+
+/* By adding placeholders, we can use CSS to detect whether the field is empty. Hide the placeholder */
+::deep input::placeholder,
+::deep textarea::placeholder {
+    color: transparent;
+    opacity: 0;
+    display: none;
+}
+
+small {
+    font-size: 12.6px;
+}
+
+.form-text {
+    display: block;
+    margin-top: .4rem;
+}
+
+.form-btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 8px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-btn-primary {
+    color: #fff;
+    background-color: #087cbf;
+    border-color: #087cbf;
+    letter-spacing: 1px;
+}
+
+    .form-btn-primary:focus {
+        color: #fff;
+        background-color: #1b8ed1;
+        border-color: #1b8ed1;
+        box-shadow: 0 0 0 5px rgba(38,143,255,.5);
+    }
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #6c757d;
+}
+
+    .btn-outline-secondary:hover {
+        color: #fff;
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+.btn-lg {
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 8px;
+}

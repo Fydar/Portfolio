@@ -1,0 +1,14 @@
+
+<div class="cover-grid cover-grid-@Size">
+
+    @ChildContent
+
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    [Parameter]
+    public string Size { get; set; } = "sm";
+}

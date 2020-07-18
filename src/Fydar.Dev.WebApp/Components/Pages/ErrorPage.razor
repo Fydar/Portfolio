@@ -1,0 +1,29 @@
+@page "/error"
+@page "/error/{errorCode:int}"
+@layout MainLayout
+
+@using System.Diagnostics
+@using System.Net
+
+<PageTitle>Error - Fydar</PageTitle>
+
+<main>
+    <section class="container">
+
+        <div class="page">
+
+            <h2>Uh oh!</h2>
+
+            <p>It appears that there has been an error! Please try again soon.</p>
+
+            <p>Error Code: @HttpContext?.Response.StatusCode (@((HttpStatusCode)(HttpContext?.Response.StatusCode ?? 500)))</p>
+
+        </div>
+
+    </section>
+</main>
+
+@code {
+    [CascadingParameter]
+    public HttpContext? HttpContext { get; set; }
+}

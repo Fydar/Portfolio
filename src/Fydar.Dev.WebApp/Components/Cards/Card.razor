@@ -1,0 +1,38 @@
+<a href="@href" class="card pointer-relative" style="aspect-ratio:@AspectRatio">
+
+    @FeaturedImage
+
+    <div class="card-border-subtle"></div>
+    <div class="card-border-secondary"></div>
+    <div class="card-hover">
+        <div class="card-outerglow">
+            <div class="card-outerglow-tl"></div>
+            <div class="card-outerglow-t"></div>
+            <div class="card-outerglow-tr"></div>
+            <div class="card-outerglow-ml"></div>
+            <div class="card-outerglow-mr"></div>
+            <div class="card-outerglow-bl"></div>
+            <div class="card-outerglow-b"></div>
+            <div class="card-outerglow-br"></div>
+        </div>
+        <div class="card-background-primary"></div>
+        <div class="card-border-primary"></div>
+    </div>
+
+    @ChildContent
+
+</a>
+
+@code {
+    [Parameter]
+    public RenderFragment? FeaturedImage { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string href { get; set; } = string.Empty;
+
+    [Parameter]
+    public string AspectRatio { get; set; } = string.Empty;
+}

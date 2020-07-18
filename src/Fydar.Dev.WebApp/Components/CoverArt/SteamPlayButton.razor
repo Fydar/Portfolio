@@ -1,0 +1,13 @@
+<a href="@href" target="_blank" class="steamplaybutton">
+
+    @ChildContent
+
+</a>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string href { get; set; } = string.Empty;
+}

@@ -1,0 +1,30 @@
+a {
+    display: inline-block;
+    position: relative;
+    margin: 2px 0;
+}
+
+    a:not(.revealed) {
+        padding-left: 8px;
+        text-decoration: none;
+        color: rgb(216, 216, 216);
+    }
+
+        a:not(.revealed):before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            padding-left: 10px;
+            background-color: #4c4430;
+            border-radius: 16px;
+            align-self: center;
+            z-index: -1;
+        }
+
+    a.revealed {
+        background-color: transparent;
+    }

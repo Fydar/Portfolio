@@ -1,0 +1,20 @@
+
+/* Card grids */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem 1.1rem;
+    margin: 16px 0;
+}
+
+    .card-grid.card-grid-md {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-grid.card-grid-sm {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card-grid.card-grid-xs {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }

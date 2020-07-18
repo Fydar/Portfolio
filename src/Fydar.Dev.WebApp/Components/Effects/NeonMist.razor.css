@@ -1,0 +1,39 @@
+
+.mist {
+    height: 1268px;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+    .mist .mist-1,
+    .mist .mist-2,
+    .mist .mist-3 {
+        content: "";
+        position: absolute;
+        height: 100vw;
+        aspect-ratio: 1;
+        pointer-events: none;
+        opacity: 0.06;
+        background: url("scattter.png"), radial-gradient(#97ed8d 5%, transparent 100%);
+        /*-webkit-mask-image: url(noise-5.png);
+        -webkit-mask-size: 75% 75%;*/
+    }
+
+    .mist .mist-1 {
+        transform: translate(610px, -150px) rotate(141deg);
+        background: radial-gradient(closest-side, #97ed8d 5%, transparent 100%);
+    }
+
+    .mist .mist-2 {
+        transform: translate(-40px, -230px) rotate(268deg);
+        background: radial-gradient(closest-side, #59e5ae 5%, transparent 100%);
+    }
+
+    .mist .mist-3 {
+        transform: translate(-630px, -10px) rotate(52deg);
+        background: radial-gradient(closest-side, #f2f75d 5%, transparent 100%);
+    }

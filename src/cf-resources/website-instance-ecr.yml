@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: 'fydar.dev ECR: Website Instance'
+
+Parameters: {}
+
+Metadata: {}
+
+Mappings: {}
+
+Resources:
+
+  WebsiteInstanceRepository:
+    Type: AWS::ECR::Repository
+    Properties:
+      RepositoryName: websiteinstance
+
+Outputs:
+
+  InstanceArn:
+    Value: !GetAtt [WebsiteInstanceRepository, Arn]

@@ -1,0 +1,69 @@
+
+::deep .parallax-frame {
+    width: 100%;
+    height: 100vh;
+    overflow: clip;
+}
+
+    ::deep .parallax-frame .parallax-layer {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        transform: translateY(calc(var(--parallax-offset) * var(--parallax-multiplier) * -1px));
+    }
+
+
+main {
+    grid-row: 2 / 3;
+    grid-column: 1 / 1;
+}
+
+    main.landing-fullscreen {
+        grid-row: 1 / 3;
+        grid-column: 1 / 1;
+        min-height: 100vh;
+    }
+
+        main.landing-fullscreen ::deep .landing-footer {
+            margin-top: -170px;
+            height: 176px;
+            padding: 1rem 1rem 4rem 96px;
+            background-clip: padding-box;
+            backdrop-filter: blur(4px);
+            border-top: 1px solid #ffffff15;
+            box-sizing: border-box;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+            main.landing-fullscreen ::deep .landing-footer .titlecard {
+                position: absolute;
+                top: 0;
+                left: 96px;
+                transform: translateY(-286px);
+                height: 256px;
+                width: 512px;
+                object-fit: contain;
+                object-position: bottom left;
+            }
+
+::deep .parallax-frame {
+    mask: linear-gradient(to top, #00000000 0px, #ffffff 200px, #ffffff);
+    animation: landing-fade-in ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes landing-fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

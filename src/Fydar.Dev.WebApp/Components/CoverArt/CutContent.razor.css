@@ -1,0 +1,39 @@
+
+
+.cutcontent {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: #ffffff0d;
+    padding: 12px 20px;
+}
+
+    .cutcontent .cutcontent-line {
+        display: flex;
+        align-items: center;
+    }
+
+        .cutcontent .cutcontent-line ::deep svg {
+            min-width: 30px;
+            max-width: 30px;
+            height: 30px;
+            color: #888;
+        }
+
+        .cutcontent .cutcontent-line:last-child ::deep svg {
+            transform: scaleX(-1);
+        }
+
+        .cutcontent .cutcontent-line .cutcontent-dashed {
+            border-bottom: 2px dashed #888;
+            width: 100%;
+        }
+
+        .cutcontent .cutcontent-line .cutcontent-spacer {
+            min-width: 30px;
+            max-width: 30px;
+        }
+
+    .cutcontent .cutcontent-body {
+        padding: 0 36px;
+    }

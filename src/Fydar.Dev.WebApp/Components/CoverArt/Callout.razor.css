@@ -1,0 +1,49 @@
+
+
+.callout {
+    padding: 16px 20px;
+    border-radius: 8px;
+    background-color: #252525;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+    .callout ::deep svg,
+    .callout ::deep img {
+        min-width: 30px;
+        max-width: 30px;
+        height: 30px;
+    }
+
+    .callout .callout-body {
+    }
+
+        .callout .callout-body ::deep > *:first-child {
+            margin-top: 0;
+        }
+
+        .callout .callout-body ::deep > *:last-child {
+            margin-bottom: 0;
+        }
+
+    .callout.callout-success {
+        background-color: #69f66b12;
+    }
+
+        .callout.callout-success ::deep svg {
+            color: #8ed239;
+        }
+
+    .callout.callout-primary {
+        background-color: #f6c56912;
+    }
+
+        .callout.callout-primary ::deep svg {
+            color: #f6c569;
+        }

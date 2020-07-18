@@ -1,0 +1,18 @@
+<blockquote>
+
+    @ChildContent
+
+    @if (Source != null)
+    {
+        <p class="source">@Source</p>
+    }
+
+</blockquote>
+
+@code {
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public RenderFragment? Source { get; set; }
+}

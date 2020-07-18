@@ -1,0 +1,81 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description: 'fydar.dev Lambda Function: Email to Ticket'
+
+Parameters:
+
+  ConfigEmailBucket:
+    Description: The bucket containing recieved emails.
+    Type: String
+    Default: fydar.dev-inbound-email
+
+  ConfigForwardTo:
+    Description: An email to forward all sent emails to.
+    Type: String
+    Default: example@gmail.com
+
+  LambdaFunctionBucket:
+    Description: The name of the bucket that contains the Lambda function.
+    Type: String
+    AllowedPattern: '[-_\.a-zA-Z0-9]+'
+    Default: fydar.dev-lambda
+
+  LambdaFunctionKey:
+    Description: The name of the zip file containing the Lambda function.
+    Type: String
+    AllowedPattern: '[-_\.a-zA-Z0-9]+\.zip'
+    Default: Website.EmailReceive.zip
+
+Mappings: {}
+
+Metadata: {}
+
+Resources:
+
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: The Lambda function that is invoked upon receiving and email.
+      Code:
+        S3Bucket: !Ref LambdaFunctionBucket
+        S3Key: !Ref LambdaFunctionKey
+      Environment:
+        Variables:
+          CONFIG_EMAILBUCKET: !Ref ConfigEmailBucket
+          CONFIG_FORWARDTO: !Ref ConfigForwardTo
+      Handler: Fydar.Dev.Lambda.EmailToTicket::Fydar.Dev.Lambda.EmailToTicket.FunctionService::FunctionHandler
+      MemorySize: 256
+      Role: !GetAtt LambdaFunctionTaskRole.Arn
+      Runtime: dotnet8
+      Timeout: 600
+      Tags:
+        - Key: Name
+          Value: "Email receive lambda function"
+
+  LambdaFunctionTaskRole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: 'sts:AssumeRole'
+            Principal:
+              Service: lambda.amazonaws.com
+            Sid: ''
+      ManagedPolicyArns:
+        - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+      Policies:
+        - PolicyName: emailtoticket-resources
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action: 'ses:SendRawEmail'
+                Resource: "arn:aws:ses:us-east-1:222779217717:identity/fydar.dev"
+              - Effect: Allow
+                Action: 'ses:SendEmail'
+                Resource: "arn:aws:ses:us-east-1:222779217717:identity/fydar.dev"
+              - Effect: Allow
+                Action: 's3:GetObject'
+                Resource: !Sub "arn:aws:s3:::${ConfigEmailBucket}/*"

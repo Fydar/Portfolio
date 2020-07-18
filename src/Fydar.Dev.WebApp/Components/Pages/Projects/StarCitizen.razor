@@ -1,0 +1,92 @@
+@page "/portfolio/starcitizen"
+
+<PageTitle>Star Citizen - Fydar</PageTitle>
+
+<HeadContent>
+    <meta name="description" content="description">
+</HeadContent>
+
+<MainFullscreen>
+
+    <section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
+
+        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
+            <source src="/media/starcitizen/background.mp4" type="video/mp4">
+        </video>
+
+    </section>
+
+    <section class="landing-footer">
+
+        <picture>
+            <img class="titlecard" src="media/starcitizen/titlecard.svg" alt="Title card for the game 'Star Citizen'." />
+        </picture>
+
+        <SteamPlayButton href="https://robertsspaceindustries.com/star-citizen/play-now">Visit the Store</SteamPlayButton>
+
+    </section>
+
+    <section class="container">
+
+        <p>My tooling and core system programming contributed to the development of both 'Star Citizen' and 'Squadron 42', as much of the code is shared.</p>
+
+
+        <p class="heading-prefix">Creating the</p>
+        <h2>Asset Reference Database</h2>
+
+        <p>My chief responsibility was the creation and maintainence of a tool called the <b>Asset Reference Database</b>. As the public roadmap for Star Citizen states:</p>
+
+        <Blockquote>
+            <ChildContent>
+                <p>Create a tool to track relationships and dependencies between assets and produce asset graphs showing how an in-game entity is composed. This will allow improvements to the build system and easier asset management.</p>
+            </ChildContent>
+            <Source><a href="https://robertsspaceindustries.com/roadmap/progress-tracker/deliverables" target="_blank">The Star Citizen public roadmap</a>. Retrieved March 8th, 2024.</Source>
+        </Blockquote>
+
+        <p>I worked in a highly autonomous fashion on this singular tool alongside my other responsibilitie for <b>1 year and 4 months</b>.</p>
+
+        <p>The tool was an <b>ASP.NET Core</b> microservice with a <b>Blazor WebAssembly</b> frontend, which I created both. The tool was regularly scan source control for changes to assets and inform the build system. My tool was also used to detect duplicate assets in the build, of which there were <i>many</i>.</p>
+        
+        <Callout>
+            <Icon><SvgSprite Link="/icons.svg#icon-seal-check-fill" Alt="Check" /></Icon>
+            <ChildContent>My tool allowed us to perform regular audits on our assets to detect gigabytes of duplicated data.</ChildContent>
+        </Callout>
+
+        <Callout>
+            <Icon><SvgSprite Link="/icons.svg#icon-seal-check-fill" Alt="Check" /></Icon>
+            <ChildContent>My tool formed part of the incremental build pipeline for faster development times.</ChildContent>
+        </Callout>
+
+        <Callout>
+            <Icon><SvgSprite Link="/icons.svg#icon-seal-check-fill" Alt="Check" /></Icon>
+            <ChildContent>My tool implemented a web frontend to allow developers to explore assets through their dependencies.</ChildContent>
+        </Callout>
+
+
+        <p class="heading-prefix">Tooling for</p>
+        <h2>Data Editing</h2>
+
+        <p>Myself and a few other developers maintained the in-house tool for data editing. This tool needed constant maintainence to meet the needs of a plethora of other developers.</p>
+
+        <p>Working on the Cloud Imperium Games data editing tool inspired me to develop my own solution for the same problem.</p>
+
+        <Callout>
+            <Icon><SvgSprite Link="/icons.svg#icon-seal-check-fill" Alt="Check" /></Icon>
+            <ChildContent>I maintained a tool used by hundreds of developers a day.</ChildContent>
+        </Callout>
+
+
+        <p class="heading-prefix">Programming for</p>
+        <h2>Core Game Systems</h2>
+        
+        <p>Among my responsibilities working at Cloud Imperium Games was the maintainence of core game code for loading data. This required constant maintainence to fix a plethora of issues that occurred from having an older codebase doing things it was never designed to do.</p>
+
+        <Callout>
+            <Icon><SvgSprite Link="/icons.svg#icon-seal-check-fill" Alt="Check" /></Icon>
+            <ChildContent>I programmed core game client systems in <b>C++</b>.</ChildContent>
+        </Callout>
+
+
+    </section>
+
+</MainFullscreen>

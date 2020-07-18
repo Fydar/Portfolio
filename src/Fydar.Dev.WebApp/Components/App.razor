@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" /><meta name="darkreader-lock">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="darkreader-lock">
+    <base href="/" />
+    <link rel="stylesheet" href="inter/inter.css" />
+    <link rel="stylesheet" href="Fydar.Dev.WebApp.styles.css" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <HeadOutlet />
+</head>
+
+<body class="page">
+    <Routes />
+
+    <BlazorErrorUI />
+    <script src="_framework/blazor.web.js" autostart="false"></script>
+    <script>
+        Blazor.start({
+            ssr: { disableDomPreservation: true }
+        });
+    </script>
+    <script src="site.js"></script>
+</body>
+
+</html>

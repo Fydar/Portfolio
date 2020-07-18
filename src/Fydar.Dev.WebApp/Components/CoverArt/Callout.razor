@@ -1,0 +1,23 @@
+<div class="callout callout-@Type">
+
+    @if (Icon != null)
+    {
+        @Icon
+    }
+
+    <div class="callout-body">
+        @ChildContent
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? Icon { get; set; }
+
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+
+    [Parameter]
+    public string Type { get; set; } = "success";
+}

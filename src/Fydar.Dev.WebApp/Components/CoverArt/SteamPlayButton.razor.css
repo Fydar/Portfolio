@@ -1,0 +1,20 @@
+
+
+.steamplaybutton {
+    border-radius: 4px;
+    padding: 20px 32px;
+    background: linear-gradient(to right, #7cc444, #5fad57);
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: filter 0.35s;
+}
+
+    .steamplaybutton:hover,
+    .steamplaybutton:focus {
+        /* background: linear-gradient(to right, #8ed239, #70ba4b); */
+        filter: brightness(1.15) saturate(1.2);
+    }

@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <AWSProjectType>Lambda</AWSProjectType>
+    <TrimMode>partial</TrimMode>
+    <!-- This property makes the build directory similar to a publish directory and helps the AWS .NET Lambda Mock Test Tool find project dependencies. -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <!-- Generate ready to run images during publishing to improve cold start time. -->
+    <PublishReadyToRun>true</PublishReadyToRun>
+
+    <!--<PublishAot>true</PublishAot>
+    <OutputType>exe</OutputType>
+    <TrimMode>partial</TrimMode>
+    <StripSymbols>true</StripSymbols>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+
+    <AWSProjectType>Lambda</AWSProjectType>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>-->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Fydar.Dev.Services.EmailTickets\Fydar.Dev.Services.EmailTickets.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Amazon.Lambda.Annotations" Version="1.2.0" />
+    <PackageReference Include="Amazon.Lambda.Core" Version="2.2.0" />
+    <PackageReference Include="Amazon.Lambda.RuntimeSupport" Version="1.10.0" />
+    <PackageReference Include="Amazon.Lambda.Serialization.SystemTextJson" Version="2.4.1" />
+    <PackageReference Include="Amazon.Lambda.SimpleEmailEvents" Version="3.1.0" />
+    <PackageReference Include="AWSSDK.SimpleEmail" Version="3.7.300.55" />
+  </ItemGroup>
+  
+</Project>
