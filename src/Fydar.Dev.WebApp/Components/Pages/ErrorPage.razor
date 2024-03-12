@@ -1,6 +1,5 @@
 @page "/error"
 @page "/error/{errorCode:int}"
-@layout MainLayout
 
 @using System.Diagnostics
 @using System.Net
@@ -16,7 +15,7 @@
 
             <p>It appears that there has been an error! Please try again soon.</p>
 
-            <p>Error Code: @HttpContext?.Response.StatusCode (@((HttpStatusCode)(HttpContext?.Response.StatusCode ?? 500)))</p>
+            <p>Error Code: @ErrorCode (@((HttpStatusCode)(ErrorCode ?? 500)))</p>
 
         </div>
 
@@ -24,6 +23,6 @@
 </main>
 
 @code {
-    [CascadingParameter]
-    public HttpContext? HttpContext { get; set; }
+    [Parameter]
+    public int? ErrorCode { get; set; }
 }

@@ -168,6 +168,8 @@ public class Program
 			app.UseExceptionHandler("/error");
 		}
 
+		app.UseStatusCodePagesWithReExecute("/error/{0}");
+
 		app.MapIconLibrary<SiteIcons>("/icons.svg");
 
 		app.UseStaticFiles();
