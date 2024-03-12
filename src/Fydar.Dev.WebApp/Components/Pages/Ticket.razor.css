@@ -1,0 +1,13 @@
+.ticket-body {
+    padding: 1rem;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #404040;
+    font-family: Calibri, sans-serif;
+    font-size: 11pt;
+    font-weight: 400;
+}
+
+.ticket-from {
+    margin-top: 6rem;
+}

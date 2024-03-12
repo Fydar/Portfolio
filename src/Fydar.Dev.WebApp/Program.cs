@@ -93,7 +93,7 @@ public class Program
 		{
 			Bucket = "fydar.dev-inbound-email"
 		});
-		builder.Services.AddSingleton<S3EmailReaderService>();
+		builder.Services.AddSingleton<IEmailReaderService, S3EmailReaderService>();
 		builder.Services.AddScoped<HtmlRenderer>();
 
 		builder.Services.AddScoped<IContactSubmitSink, SaveTicketSubmitSink>();

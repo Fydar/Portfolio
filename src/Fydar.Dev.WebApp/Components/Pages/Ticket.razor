@@ -1,0 +1,43 @@
+@using Fydar.Dev.Services.EmailTickets;
+@using Fydar.Dev.Services.EmailTickets.Models;
+@using MimeKit
+
+@page "/ticket/{ticketId}"
+@attribute [StreamRendering(true)]
+
+@inject IEmailReaderService emailReaderService;
+
+<PageTitle>Ticket - Fydar</PageTitle>
+
+<main>
+    <section class="container" style="max-width: 900px;">
+        
+        @if (mimeMessage == null)
+        {
+            <p><em>Loading...</em></p>
+        }
+        else
+        {
+            <p class="ticket-from">@mimeMessage.From.ToString()</p>
+
+            <p class="ticket-to">@mimeMessage.To.ToString()</p>
+
+            <div class="ticket-body">
+                @((MarkupString)(mimeMessage.HtmlBody?.ToString() ?? mimeMessage.TextBody?.ToString() ?? ""))
+            </div>
+        }
+    </section>
+
+</main>
+
+@code {
+    [Parameter]
+    public string TicketId { get; set; } = string.Empty;
+
+    private MimeMessage? mimeMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        mimeMessage = await emailReaderService.ReadEmailAsync(TicketId);
+    }
+}
