@@ -321,68 +321,6 @@ li {
     margin-bottom: 2pt;
 }
 
-
-.award-row {
-    gap: 4rem;
-    margin-bottom: 0.5rem;
-    justify-content: center;
-}
-
-.award {
-    position: relative;
-    padding: 0 8pt;
-    min-height: 64pt;
-    display: flex;
-    flex-direction: column;
-}
-
-    .award:nth-of-type(2) {
-        animation-delay: 0.4s;
-    }
-
-    .award .award-value {
-        min-width: 96pt;
-        height: 64pt;
-        font-size: 2.15rem;
-        display: flex;
-        width: 100%;
-        align-items: center;
-        place-content: center;
-    }
-
-        .award .award-value:before,
-        .award .award-value:after {
-            content: '';
-            display: block;
-            position: absolute;
-            width: 32pt;
-            height: 64pt;
-            background: url("/laurel-left.svg");
-            background-size: 100%;
-        }
-
-        .award .award-value:before {
-            top: 0;
-            left: 0;
-        }
-
-        .award .award-value:after {
-            top: 0;
-            right: 0;
-            transform: scaleX(-1);
-        }
-
-    .award .award-name {
-        padding-top: 6pt;
-        width: 100%;
-        font-size: 1.2rem;
-        text-align: center;
-        white-space: nowrap;
-        /* text-transform: uppercase; */
-        letter-spacing: 1pt;
-    }
-
-
 ul.footer-externallinks {
     display: flex;
     height: 100%;
