@@ -44,32 +44,47 @@
             box-sizing: border-box;
             padding: 3% 3%;
             pointer-events: none;
+            display: flex;
         }
 
-            .cover .cover-background .cover-overlay ::deep svg,
-            .cover .cover-background .cover-overlay ::deep img {
+            .cover .cover-background .cover-overlay ::deep .logo {
                 width: 100%;
                 height: 100%;
+                margin: auto;
                 object-fit: contain;
             }
 
-                .cover .cover-background .cover-overlay ::deep svg.logo,
-                .cover .cover-background .cover-overlay ::deep img.logo {
-                }
-
-                .cover .cover-background .cover-overlay ::deep svg.logo-top,
-                .cover .cover-background .cover-overlay ::deep img.logo-top {
+                .cover .cover-background .cover-overlay ::deep .logo.logo-southfield {
                     object-position: top;
+                    height: 88.5%;
+                    width: 97%;
+                    filter: drop-shadow(0px 1px 2px #0002);
                 }
 
-                .cover .cover-background .cover-overlay ::deep svg.logo-bottom,
-                .cover .cover-background .cover-overlay ::deep img.logo-bottom {
+                .cover .cover-background .cover-overlay ::deep .logo.logo-outrage {
                     object-position: bottom;
+                    height: 95%;
+                    width: 95%;
                 }
 
-                .cover .cover-background .cover-overlay ::deep svg.logo-dropshadow,
-                .cover .cover-background .cover-overlay ::deep img.logo-dropshadow {
-                    filter: drop-shadow(0px 4px 6px black);
+                .cover .cover-background .cover-overlay ::deep .logo.logo-starcitizen {
+                    object-position: top;
+                    height: 100%;
+                    width: 75%;
+                    filter: drop-shadow(0px 1px 2px #0006);
+                }
+
+                .cover .cover-background .cover-overlay ::deep .logo.logo-squadron42 {
+                    height: 87.5%;
+                    width: 75%;
+                    filter: drop-shadow(0px 1px 2px #0006);
+                }
+
+                .cover .cover-background .cover-overlay ::deep .logo.logo-eitr {
+                    object-position: top;
+                    height: 95%;
+                    width: 95%;
+                    filter: drop-shadow(0px 1px 4px black);
                 }
 
         /* Shine */
