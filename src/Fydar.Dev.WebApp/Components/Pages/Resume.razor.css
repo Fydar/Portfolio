@@ -1,10 +1,6 @@
 
 .resume {
-    font-family: Calibri, sans-serif;
-    font-size: 11pt;
-    color: #404040;
     z-index: 1;
-    text-align: justify;
     padding: 2rem 1rem 1rem 1rem;
 }
 
@@ -16,16 +12,20 @@
         padding: 12mm 14mm;
         box-sizing: border-box;
         background-color: white;
+        color: #404040;
         page-break-inside: avoid;
         font-weight: 400;
         line-height: 1.2;
+        text-align: justify;
+        font-family: Calibri, sans-serif;
+        font-size: 11pt;
     }
 
     .resume h1 {
         font-size: 18pt;
         font-weight: 400;
         color: #404040;
-        margin: 0 0 1.5rem 0;
+        margin: 0 0 26pt 0;
         letter-spacing: 0.25pt;
     }
 
@@ -49,12 +49,25 @@
         margin-bottom: 6pt;
     }
 
-    .resume .tagheading {
-        font-size: 9pt;
-        text-transform: uppercase;
-        letter-spacing: 0.5pt;
-        font-weight: bold;
-        margin: 0;
+    .resume a {
+        text-decoration: none;
+        color: #44546a;
+    }
+
+    .resume ul {
+        padding-left: 20pt;
+    }
+
+        .resume ul li {
+            margin-bottom: 2pt;
+        }
+
+    .resume h2,
+    .resume h3,
+    .resume .subtitle2,
+    .resume .subtitle3,
+    .resume .subtitle4 {
+        margin: 0 0 1pt 0;
     }
 
     .resume .subtitle2 {
@@ -70,14 +83,59 @@
         font-size: 10.5pt;
     }
 
-    .resume ul {
-        padding-left: 20pt;
+    .resume .link-tag {
+        background-color: #f6f8fa;
+        border: solid 1pt rgb(209, 213, 218);
+        border-radius: 8pt;
+        padding: 0 6pt 0 4pt;
+        margin: 4pt 4pt 0 0;
+        gap: 4pt;
+        display: inline-flex;
+        color: #565656;
+        align-items: center;
+        font-weight: bold;
     }
 
-    .resume .grid-skills {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        .resume .link-tag ::deep svg {
+            width: 14pt;
+            height: 14pt;
+        }
+
+            .resume .link-tag ::deep svg.link-type {
+                width: 8pt;
+                height: 8pt;
+                margin-left: 2pt;
+                margin-top: 2pt;
+                margin-right: 2pt;
+                align-self: start;
+            }
+
+    .resume ul.resume-externallinks {
+        display: flex;
+        gap: 10pt;
+        margin: 26pt 0 0 0;
+        padding: 0;
+        justify-content: center;
     }
+
+        .resume ul.resume-externallinks li.nav-siteicon {
+            display: flex;
+            background-color: black;
+            border-radius: 25%;
+        }
+
+            .resume ul.resume-externallinks li.nav-siteicon a {
+                color: #f6f6f6;
+                display: flex;
+                user-select: none;
+            }
+
+            .resume ul.resume-externallinks li.nav-siteicon ::deep svg {
+                height: 22pt;
+                width: 22pt;
+                padding: 8pt;
+            }
+
 
     .resume .timeline-company {
         display: grid;
@@ -86,7 +144,6 @@
         margin-bottom: 16pt;
         page-break-inside: avoid;
     }
-
 
         .resume .timeline-company .timeline-company-media,
         .resume .timeline-company .timeline-position-media {
@@ -101,19 +158,19 @@
             .resume .timeline-company .timeline-company-media img,
             .resume .timeline-company .timeline-position-media img {
                 height: 48pt;
+                box-sizing: border-box;
                 min-width: 74.6pt;
                 max-width: 74.6pt;
                 margin-right: 0.8rem;
                 overflow: hidden;
-                border: 1pt solid #bbbbbb;
-                background-color: #293138;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 border-radius: 8pt;
                 object-fit: cover;
+                border: 1pt solid #bbbbbb;
+                background-color: #293138;
                 color: #eeeeee;
-                box-sizing: border-box;
             }
 
             .resume .timeline-company .timeline-company-media .timeline-company-media-body,
@@ -234,190 +291,6 @@
         }
 
 
-    .resume h2,
-    .resume h3,
-    .resume .subtitle2,
-    .resume .subtitle3,
-    .resume .subtitle4 {
-        margin: 0 0 1pt 0;
-    }
-
-    .resume ::deep .cover-grid {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        gap: 1.25rem;
-    }
-
-        .resume ::deep .cover-grid .cover[b-ttaptpl2ma]::before {
-            background: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 6pt 6pt 6pt rgba(0, 0, 0, 0.4);
-        }
-
-    .resume ::deep .cover-grid-xs {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        gap: 0.75rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-
-        .resume ::deep .cover-grid-xs .cover[b-ttaptpl2ma]::before {
-            background: rgba(0, 0, 0, 0.5);
-            box-shadow: 0 2pt 4pt 2pt rgba(0, 0, 0, 0.4);
-        }
-
-
-@page {
-    size: A4 Portrait;
-    margin: 0;
-}
-
-.background {
-    position: fixed;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("data:image/svg+xml,%3Csvg width='297' height='420' xmlns='http://www.w3.org/2000/svg'%3E%3ClinearGradient spreadMethod='pad' id='gradient' x1='0%25' y1='100%25' x2='0%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:rgb(250, 250, 250);stop-opacity:1;' /%3E%3Cstop offset='100%25' style='stop-color:rgb(244, 244, 244);stop-opacity:1;' /%3E%3C/linearGradient%3E%3Crect fill='%23fafafa' height='420' width='297' y='0' x='0'/%3E%3Cpath d='m297,419.99999l0,-350.3575l-349.18915,350.3575l349.18915,0z' fill='url(%23gradient)'/%3E%3Cpath d='m297,420l0,-130.7061l-130.27023,130.7061l130.27023,0z' fill='url(%23gradient)'/%3E%3C/svg%3E");
-    background-repeat: repeat-y;
-    background-position: right top;
-    background-size: 100%;
-}
-
-
-.header, .header-space,
-.footer, .footer-space {
-    height: 12mm;
-}
-
-.header {
-    position: fixed;
-    top: 0;
-}
-
-. {
-    position: fixed;
-    bottom: 0;
-}
-
-    .group-page {
-        page-break-inside: avoid;
-    }
-
-    .group-page-solo {
-        page-break-after: always;
-    }
-
-a {
-    text-decoration: none;
-    color: #44546a;
-}
-
-p code {
-    display: inline-block;
-    font: Consolas,Monaco,'Andale Mono',monospace;
-}
-
-
-li {
-    margin-bottom: 2pt;
-}
-
-ul.footer-externallinks {
-    display: flex;
-    height: 100%;
-    gap: 10pt;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-}
-
-    ul.footer-externallinks li.nav-siteicon {
-        display: flex;
-        height: 100%;
-        -webkit-box-align: center;
-        align-items: center;
-        flex-shrink: 0;
-        margin: 0pt;
-        font-size: 14pt;
-        font-weight: var(--font-weight-medium);
-    }
-
-        ul.footer-externallinks li.nav-siteicon ::deep img,
-        ul.footer-externallinks li.nav-siteicon ::deep svg {
-            height: 32pt;
-            width: 32pt;
-            padding: 8pt;
-            margin: auto;
-        }
-
-        ul.footer-externallinks li.nav-siteicon a {
-            display: flex;
-            height: 100%;
-            min-width: 32pt;
-            min-height: 32pt;
-            -webkit-box-align: center;
-            align-items: center;
-            user-select: none;
-        }
-
-.link-tag {
-    background-color: #f6f8fa;
-    border: solid 1pt rgb(209, 213, 218);
-    border-radius: 8pt;
-    padding: 0 6pt 0 4pt;
-    margin: 4pt 4pt 0 0;
-    gap: 4pt;
-    display: inline-flex;
-    color: #565656;
-    align-items: center;
-    font-weight: bold;
-}
-
-    .link-tag ::deep svg {
-        width: 14pt;
-        height: 14pt;
-    }
-
-        .link-tag ::deep svg.link-type {
-            width: 8pt;
-            height: 8pt;
-            margin-left: 2pt;
-            margin-top: 2pt;
-            margin-right: 2pt;
-            align-self: start;
-        }
-
-p.experience {
-    text-align: center;
-    font-size: 15pt;
-    margin: 0;
-    letter-spacing: 0.5pt;
-}
-
-.xp-bar {
-    padding-top: 6pt;
-    padding-bottom: 6pt;
-    margin-bottom: 18pt;
-}
-
-    .xp-bar .background,
-    .xp-bar .fill {
-        height: 7pt;
-        width: 100%;
-        display: flex;
-        gap: 2pt;
-    }
-
-        .xp-bar .background .segment,
-        .xp-bar .fill .segment {
-            flex-grow: 1;
-            background: #ffffffa0;
-            background: #79ab34;
-            border-bottom: 2pt solid #00000050;
-            border-top: 2pt solid #ffffff50;
-            border-radius: 4pt;
-        }
-
-
 @media print {
     * {
         -webkit-print-color-adjust: exact;
@@ -425,6 +298,7 @@ p.experience {
 
     @page {
         size: 210mm 297mm;
+        margin: 0;
     }
 
     .resume {

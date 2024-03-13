@@ -71,6 +71,11 @@ body.page {
     */
 }
 
+p > code {
+    display: inline-block;
+    font: Consolas,Monaco,'Andale Mono',monospace;
+}
+
 ::deep .media-wide {
 }
 
