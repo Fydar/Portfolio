@@ -109,7 +109,7 @@ public class Program
 			{
 				opts.OnPrepareResponse = ctx =>
 				{
-					ctx.Context.Response.Headers[HeaderNames.CacheControl] = $"public,max-age=600";
+					ctx.Context.Response.Headers[HeaderNames.CacheControl] = $"public,max-age=31536000";
 				};
 			});
 
