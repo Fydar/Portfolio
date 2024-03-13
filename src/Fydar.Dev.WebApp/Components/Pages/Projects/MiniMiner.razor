@@ -1,9 +1,22 @@
 @page "/portfolio/miniminer"
 
-<PageTitle>Mini Miner - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Mini Miner - Fydar",
+            Description = "The Game Boy demake of the Nintendo DS Pokémon Diamond and Pearl underground mining minigame.",
+            CanonicalUrl = "https://fydar.dev/portfolio/miniminer",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/miniminer/keyart-1_91x1.png",
+                    Alt = "Promotional material for the game 'Mini Miner'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>

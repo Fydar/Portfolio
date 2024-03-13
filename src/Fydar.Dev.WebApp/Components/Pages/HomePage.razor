@@ -4,27 +4,27 @@
 
 @attribute [OutputCache(Duration = 600)]
 
-<PageTitle>Fydar</PageTitle>
-
 @inject NavigationManager NavigationManager
 
 <HeadContent>
-    <link rel="canonical" href="/" />
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Fydar",
+            Description = "Fydar is a game developer and engineer who thrives when pushing technical boundaries and creating memorable experiences.",
+            CanonicalUrl = "https://fydar.dev",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/header.webp",
+                    Alt = "A portrait of Fydar in an anime artstyle."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 
-    <meta name="description" content="Fydar is a game developer and engineer who thrives when pushing technical boundaries and creating memorable experiences.">
-
-    <meta property="og:url" content="https://fydar.dev/">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Fydar">
-    <meta property="og:description" content="Fydar is a game developer who thrives when pushing technical boundaries and creating memorable experiences">
-    <meta property="og:image" content="https://fydar.dev/media/header.webp">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="fydar.dev">
-    <meta property="twitter:url" content="https://fydar.dev/">
-    <meta name="twitter:title" content="Fydar">
-    <meta name="twitter:description" content="Fydar is a game developer who thrives when pushing technical boundaries and creating memorable experiences">
-    <meta name="twitter:image" content="https://fydar.dev/media/header.webp">
+    <link rel="preload" href="media/portrait-cropped.webp" as="image" />
 </HeadContent>
 
 <main>
@@ -32,7 +32,7 @@
         <div class="hero">
             <div class="portrait">
                 <picture>
-                    <img src="media/portrait-cropped.webp" alt="A portrait of Fydar in an anime art style." loading="lazy" />
+                    <img src="media/portrait-cropped.webp" alt="A portrait of Fydar in an anime art style." />
                 </picture>
             </div>
 
@@ -106,18 +106,18 @@
             <Cover href="/portfolio/southfield">
                 <Background>
                     <picture>
-                        <img src="media/southfield/coverart-background.webp" loading="lazy" alt="Cover art for the game 'Southfield'." />
+                        <img loading="lazy" width="400" height="600" src="media/southfield/coverart-background.webp" alt="Cover art for the game 'Southfield'." />
                     </picture>
                 </Background>
                 <Overlay>
-                    <img class="logo logo-southfield" src="media/southfield/titlecard.svg" loading="lazy" alt="Logo for the game 'Squadron 42'." />
+                    <img loading="lazy" class="logo logo-southfield" src="media/southfield/titlecard.svg" alt="Logo for the game 'Squadron 42'." />
                 </Overlay>
             </Cover>
 
             <Cover href="/portfolio/outrage">
                 <Background>
                     <picture>
-                        <img src="media/outrage/coverart.webp" loading="lazy" alt="Cover art for the game 'Outrage'." />
+                        <img loading="lazy" width="400" height="600" src="media/outrage/coverart.webp" alt="Cover art for the game 'Outrage'." />
                     </picture>
                 </Background>
             </Cover>
@@ -125,39 +125,39 @@
             <Cover href="/portfolio/starcitizen">
                 <Background>
                     <picture>
-                        <img src="media/starcitizen/coverart-background.webp" loading="lazy" alt="Cover art for the game 'Star Citizen'." />
+                        <img loading="lazy" width="400" height="600" src="media/starcitizen/coverart-background.webp" alt="Cover art for the game 'Star Citizen'." />
                     </picture>
                 </Background>
                 <Overlay>
-                    <img class="logo logo-starcitizen" src="media/starcitizen/titlecard.svg" loading="lazy" alt="Logo for the game 'Star Citizen'." />
+                    <img loading="lazy" class="logo logo-starcitizen" src="media/starcitizen/titlecard.svg" alt="Logo for the game 'Star Citizen'." />
                 </Overlay>
             </Cover>
 
             <Cover href="/portfolio/starcitizen">
                 <Background>
                     <picture>
-                        <img src="media/squadron42/coverart-background.webp" loading="lazy" alt="Cover art for the game 'Squadron 42'." />
+                        <img loading="lazy" width="400" height="600" src="media/squadron42/coverart-background.webp" alt="Cover art for the game 'Squadron 42'." />
                     </picture>
                 </Background>
                 <Overlay>
-                    <img class="logo logo-squadron42" src="media/squadron42/titlecard.svg" loading="lazy" alt="Logo for the game 'Squadron 42'." />
+                    <img loading="lazy" class="logo logo-squadron42" src="media/squadron42/titlecard.svg" alt="Logo for the game 'Squadron 42'." />
                 </Overlay>
             </Cover>
 
             <Cover href="/portfolio/legostarwarsbattles">
                 <Background>
                 <picture>
-                    <img src="media/legostarwarsbattles/legostarwarsbattles-coverart.webp" loading="lazy" alt="Cover art for the game 'LEGO Star Wars: Battles'." />
+                        <img loading="lazy" width="400" height="600" src="media/legostarwarsbattles/legostarwarsbattles-coverart.webp" alt="Cover art for the game 'LEGO Star Wars: Battles'." />
                     </picture>
                 </Background>
             </Cover>
 
             <Cover href="/portfolio/eitr">
                 <Background>
-                    <img src="media/eitr/coverart-background.png" loading="lazy" alt="Cover art for the game 'Eitr'." style="image-rendering: pixelated;" />
+                    <img loading="lazy" width="400" height="600" src="media/eitr/coverart-background.png" alt="Cover art for the game 'Eitr'." style="image-rendering: pixelated;" />
                 </Background>
                 <Overlay>
-                    <img class="logo logo-eitr" src="media/eitr/titlecard.png" loading="lazy" alt="Logo for the game 'Eitr'." style="image-rendering: pixelated;" />
+                    <img loading="lazy" class="logo logo-eitr" src="media/eitr/titlecard.png" alt="Logo for the game 'Eitr'." style="image-rendering: pixelated;" />
                 </Overlay>
             </Cover>
 
@@ -264,7 +264,7 @@
             <Card AspectRatio="4/3" href="/portfolio/miniminer">
                 <FeaturedImage>
                     <picture>
-                        <img class="card-image" src="media/miniminer/miniminer-background-1.png" loading="lazy" alt="Preview of the game 'Mini Miner' showing a puzzle." />
+                        <img loading="lazy" width="640" height="480" class="card-image" src="media/miniminer/miniminer-background-1.png" alt="Preview of the game 'Mini Miner' showing a puzzle." />
                     </picture>
                 </FeaturedImage>
                 <ChildContent>
@@ -305,7 +305,7 @@
             <Card AspectRatio="4/3" href="/portfolio/raidhealersimulator">
                 <FeaturedImage>
                     <picture>
-                        <img class="card-image" src="media/raidhealersimulator/ludum-dare-46-header.png" loading="lazy" alt="Preview of the Raid Healer Simulator game." />
+                        <img loading="lazy" width="400" height="300"  class="card-image" src="media/raidhealersimulator/ludum-dare-46-header.png" alt="Preview of the Raid Healer Simulator game." />
                     </picture>
                 </FeaturedImage>
                 <ChildContent>
@@ -325,7 +325,7 @@
             <Card AspectRatio="4/3" href="/portfolio/snoot">
                 <FeaturedImage>
                     <picture>
-                        <img class="card-image" src="media/snoot/thumbnail_400x300.jpg" loading="lazy" alt="Preview of the game 'Snoot' featuring the protagonist in the world with signs of life." />
+                        <img loading="lazy" width="400" height="300" class="card-image" src="media/snoot/thumbnail_400x300.jpg" alt="Preview of the game 'Snoot' featuring the protagonist in the world with signs of life." />
                     </picture>
                 </FeaturedImage>
                 <ChildContent>
@@ -345,7 +345,7 @@
             <Card AspectRatio="4/3" href="/portfolio/roadtonorthstead">
                 <FeaturedImage>
                     <picture>
-                        <img class="card-image" src="media/roadtonorthstead/minijam-40-hunters-header.png" loading="lazy" alt="Preview of the game 'Road to Northstead' featuring the player party around a campfire.." />
+                        <img loading="lazy" width="400" height="300" class="card-image" src="media/roadtonorthstead/minijam-40-hunters-header.png" alt="Preview of the game 'Road to Northstead' featuring the player party around a campfire.." />
                     </picture>
                 </FeaturedImage>
                 <ChildContent>
@@ -473,7 +473,7 @@
             <Card AspectRatio="4/3" href="/portfolio/thedwellers">
                 <FeaturedImage>
                     <picture>
-                        <img class="card-image" src="media/thedwellers/the-dwellers-header.jpg" loading="lazy" alt="Preview of the game 'The Dwellers'" />
+                        <img loading="lazy" width="640" height="480" class="card-image" src="media/thedwellers/the-dwellers-header.jpg" alt="Preview of the game 'The Dwellers'" />
                     </picture>
                 </FeaturedImage>
                 <ChildContent>
@@ -493,7 +493,7 @@
             <Card AspectRatio="4/3" href="/portfolio/voxelmultiplayer">
                 <FeaturedImage>
                     <picture>
-                        <img class="card-image" src="media/voxelmultiplayer/voxel-multiplayer-header.png" loading="lazy" alt="Preview of the Voxel Multiplayer, showing the player character atop of a mountain." />
+                        <img loading="lazy" width="640" height="480" class="card-image" src="media/voxelmultiplayer/voxel-multiplayer-header.png" alt="Preview of the Voxel Multiplayer, showing the player character atop of a mountain." />
                     </picture>
                 </FeaturedImage>
                 <ChildContent>
@@ -513,7 +513,7 @@
             <Card AspectRatio="4/3" href="/portfolio/thenewearthconflict">
                 <FeaturedImage>
                     <picture>
-                        <img class="card-image" src="media/thenewearthconflict/the-new-earth-conflict-header.png" loading="lazy" alt="A preview of the game 'The New Earth Conflict' featuring the player ship engaging in combat." />
+                        <img loading="lazy" width="640" height="480" class="card-image" src="media/thenewearthconflict/the-new-earth-conflict-header.png" alt="A preview of the game 'The New Earth Conflict' featuring the player ship engaging in combat." />
                     </picture>
                 </FeaturedImage>
                 <ChildContent>
@@ -533,7 +533,7 @@
             <Card AspectRatio="4/3" href="/portfolio/cryptcrawl">
                 <FeaturedImage>
                     <picture>
-                        <img class="card-image" src="media/cryptcrawl/crypt-crawl-header.png" loading="lazy" alt="A preview of the game 'Crypt Crawl' featuring the protagonist wizard in a brown dungeon." />
+                        <img loading="lazy" width="640" height="480" class="card-image" src="media/cryptcrawl/crypt-crawl-header.png" alt="A preview of the game 'Crypt Crawl' featuring the protagonist wizard in a brown dungeon." />
                     </picture>
                 </FeaturedImage>
                 <ChildContent>

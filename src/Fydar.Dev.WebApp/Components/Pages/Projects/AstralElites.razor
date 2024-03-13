@@ -1,9 +1,22 @@
 @page "/portfolio/astralelites"
 
-<PageTitle>Astral Elites - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Astral Elites - Fydar",
+            Description = "The physics-based and fast-paced asteroid clone for the modern era, complete with Discord integration.",
+            CanonicalUrl = "https://fydar.dev/portfolio/astralelites",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/astralelites/keyart-1_91x1-1200x630.webp",
+                    Alt = "Promotional material for the game 'Astral Elites'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>

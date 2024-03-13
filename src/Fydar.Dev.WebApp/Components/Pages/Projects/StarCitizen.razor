@@ -1,9 +1,22 @@
 @page "/portfolio/starcitizen"
 
-<PageTitle>Star Citizen - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Star Citizen - Fydar",
+            Description = "A next-generation AAA massively multiplayer online sandbox of life-size planets, moons, cities, space stations, asteroid belts, and more.",
+            CanonicalUrl = "https://fydar.dev/portfolio/starcitizen",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/starcitizen/keyart.webp",
+                    Alt = "Promotional material for the game 'Star Citizen'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>

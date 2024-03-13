@@ -1,9 +1,22 @@
 @page "/portfolio/outrage"
 
-<PageTitle>OutRage - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "OutRage: Fight Fest - Fydar",
+            Description = "A 16-player beat-em-up brawler with a sandbox of attacks, weapons, and destructible props in Battle Royale Free for All and Team-based game modes.",
+            CanonicalUrl = "https://fydar.dev/portfolio/outrage",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/outrage/keyart-1_91x1-1200x630.webp",
+                    Alt = "Promotional material for the game 'OutRage: Fight Fest'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>
