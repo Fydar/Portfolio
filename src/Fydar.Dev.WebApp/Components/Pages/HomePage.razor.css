@@ -1,10 +1,6 @@
 
-
-
-
 main {
 }
-
 
 .hero {
     padding-top: 8rem;
@@ -69,24 +65,22 @@ main {
                 place-content: center;
             }
 
-                .hero .nameplate .award .award-value:before,
-                .hero .award .award-value:after {
+                .hero .nameplate .award .award-value ::deep .laurel-left,
+                .hero .nameplate .award .award-value ::deep .laurel-right {
                     content: '';
                     display: block;
                     position: absolute;
                     width: 48px;
                     height: 96px;
-                    background: url("/media/laurel-left.svg");
                     background-size: 100%;
+                    top: 0;
                 }
 
-                .hero .nameplate .award .award-value:before {
-                    top: 0;
+                .hero .nameplate .award .award-value ::deep .laurel-left {
                     left: 0;
                 }
 
-                .hero .nameplate .award .award-value:after {
-                    top: 0;
+                .hero .nameplate .award .award-value ::deep .laurel-right {
                     right: 0;
                     transform: scaleX(-1);
                 }
