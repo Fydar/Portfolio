@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.ResponseCompression;
+using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Net.Http.Headers;
 using Serilog;
 using Serilog.Events;
@@ -131,10 +132,15 @@ public class Program
 
 				kestrel.Listen(
 					IPAddress.Any, 8061,
-					listen => listen.UseHttps(adapter =>
+					listen =>
 					{
-						adapter.UseLettuceEncrypt(appServices);
-					}));
+						listen.Protocols = HttpProtocols.Http1 | HttpProtocols.Http2 | HttpProtocols.Http3;
+
+						listen.UseHttps(adapter =>
+						{
+							adapter.UseLettuceEncrypt(appServices);
+						});
+					});
 			});
 		}
 
