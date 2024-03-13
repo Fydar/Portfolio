@@ -79,6 +79,7 @@ public class Program
 		{
 			options.EnableForHttps = true;
 
+			options.Providers.Add<BrotliCompressionProvider>();
 			options.Providers.Add<GzipCompressionProvider>();
 			options.MimeTypes = ResponseCompressionDefaults.MimeTypes
 				.Concat(["image/svg+xml"]);
