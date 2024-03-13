@@ -92,7 +92,7 @@ p {
     border-radius: 8px;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    box-shadow: 0 0 0 500px var(--color-background-1) inset, 0 0 0 0 var(--color-border-select-1);
+    box-shadow: 0 0 0 500px rgb(0 0 0 / 8%) inset, 0 0 0 0 var(--color-border-select-1);
 }
 
     ::deep .form-control:focus {
@@ -101,7 +101,7 @@ p {
         outline: 0;
         border: 1px solid var(--color-border-select-2);
         color: var(--color-text-subtle-1);
-        box-shadow: 0 0 0 500px var(--color-background-1) inset, 0 0 0 5px var(--color-border-select-1);
+        box-shadow: 0 0 0 500px rgb(0 0 0 / 8%) inset, 0 0 0 5px var(--color-border-select-1);
     }
 
     ::deep .form-control:-webkit-autofill {
@@ -129,7 +129,7 @@ p {
 
     ::deep .form-control:user-invalid,
     ::deep .form-control.invalid {
-        box-shadow: 0 0 0 500px var(--color-background-1) inset, 0 0 0 0 var(--color-border-error-1);
+        box-shadow: 0 0 0 500px rgb(0 0 0 / 8%) inset, 0 0 0 0 var(--color-border-error-1);
         border: 1px solid var(--color-border-error-2);
         padding-right: calc(1.5em + .75rem);
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
@@ -142,7 +142,7 @@ p {
         ::deep .form-control:user-invalid:focus,
         ::deep .form-control.invalid:focus {
             border-color: var(--color-border-error-2);
-            box-shadow: 0 0 0 500px var(--color-background-1) inset, 0 0 0 5px var(--color-border-error-1);
+            box-shadow: 0 0 0 500px rgb(0 0 0 / 8%) inset, 0 0 0 5px var(--color-border-error-1);
         }
 
 ::deep .feedback {
