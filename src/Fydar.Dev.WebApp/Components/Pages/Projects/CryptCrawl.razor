@@ -1,9 +1,22 @@
 @page "/portfolio/cryptcrawl"
 
-<PageTitle>Crypt Crawl - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Crypt Crawl - Fydar",
+            Description = "A pixel art dungeon crawler with dungeon textures generated in Substance Designer.",
+            CanonicalUrl = "https://fydar.dev/portfolio/cryptcrawl",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/cryptcrawl/keyart-1_91x1-1220x640.png",
+                    Alt = "Promotional material for the game 'Crypt Crawl'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>

@@ -1,9 +1,22 @@
 @page "/portfolio/snoot"
 
-<PageTitle>Snoot - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Snoot - Fydar",
+            Description = "Restore life to a desolate world by exploring a sandbox of crafting recipes. On your adventure you will bring rain, grass, bugs, birds, and bees.",
+            CanonicalUrl = "https://fydar.dev/portfolio/snoot",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/snoot/keyart-1.91x1-1200x630.webp",
+                    Alt = "Promotional material for the game 'Snoot'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>

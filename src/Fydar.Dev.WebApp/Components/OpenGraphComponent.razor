@@ -10,6 +10,7 @@
 {
     <link rel="canonical" href="@Model.CanonicalUrl.Html" />
 }
+<meta name="author" content="Fydar">
 
 <!-- OpenGraph Meta Tags -->
 @if (!string.IsNullOrWhiteSpace(Model.Title.Html))
@@ -47,7 +48,6 @@
 
 <!-- Twitter Meta Tags -->
 <meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="store.steampowered.com">
 @if (!string.IsNullOrWhiteSpace(Model.CanonicalUrl.Twitter))
 {
     <meta property="twitter:url" content="@Model.CanonicalUrl.Twitter">
@@ -67,10 +67,17 @@
         @if (!string.IsNullOrWhiteSpace(openGraphModelImage.Url.TwitterUrl))
         {
             <meta name="twitter:image" content="@openGraphModelImage.Url.TwitterUrl">
-            break;
         }
+        @if (!string.IsNullOrWhiteSpace(openGraphModelImage.Alt.Twitter))
+        {
+            <meta name="twitter:image:alt" content="@openGraphModelImage.Alt.Twitter">
+        }
+        break;
     }
 }
+<meta property="twitter:domain" content="fydar.dev">
+<meta name="twitter:site" content="@@Fydarus">
+<meta name="twitter:creator" content="@@Fydarus">
 
 @code {
     [Parameter]

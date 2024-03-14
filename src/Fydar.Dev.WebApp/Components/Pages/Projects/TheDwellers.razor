@@ -1,9 +1,22 @@
 @page "/portfolio/thedwellers"
 
-<PageTitle>The Dwellers - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "The Dwellers - Fydar",
+            Description = "A dungeon crawler with a powerful node-based editor for the RPG system.",
+            CanonicalUrl = "https://fydar.dev/portfolio/thedwellers",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/thedwellers/keyart-1-1_91x1-1200-630.webp",
+                    Alt = "Promotional material for the game 'The Dwellers'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>

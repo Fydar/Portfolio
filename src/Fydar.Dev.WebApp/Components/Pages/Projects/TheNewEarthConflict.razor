@@ -1,5 +1,24 @@
 @page "/portfolio/thenewearthconflict"
 
+<HeadContent>
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "The New Earth Conflict - Fydar",
+            Description = "A realtime space strategy game where the player takes the pilot seat of a battleship.",
+            CanonicalUrl = "https://fydar.dev/portfolio/thenewearthconflict",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/thenewearthconflict/keyart-1-1_91x1-1200-630.webp",
+                    Alt = "Promotional material for the game 'The New Earth Conflict'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
+</HeadContent>
+
 <PageTitle>The New Earth Conflict - Fydar</PageTitle>
 
 <HeadContent>
@@ -35,12 +54,12 @@
         <p>Missile cannons fire frenzied-swarms of tracking missiles; torpedo launchers fire long-range tracking torpedos; mining lasers continuously mine from an asteroid; and finally, the sniper and assault lasers barrage the target with lasers.</p>
 
         <figure class="figure-image">
-            <img src="/img/the-new-earth-conflict-header.png?v=1" loading="lazy" />
+            <img loading="lazy" src="/img/the-new-earth-conflict-header.png?v=1" />
             <figcaption>Gameplay screenshot with weapons firing.</figcaption>
         </figure>
 
         <figure class="figure-image">
-            <img src="/img/the-new-earth-conflict-8.png?v=1" loading="lazy" />
+            <img loading="lazy" src="/img/the-new-earth-conflict-8.png?v=1" />
             <figcaption>Defeat screen with destroyed ship.</figcaption>
         </figure>
 

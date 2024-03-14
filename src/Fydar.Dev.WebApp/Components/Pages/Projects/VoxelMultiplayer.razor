@@ -1,9 +1,22 @@
 @page "/portfolio/voxelmultiplayer"
 
-<PageTitle>Voxel Multiplayer - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Voxel Multiplayer - Fydar",
+            Description = "Fully bespoke voxel rendering system to create a 'Cube World' style game with a multiplayer component.",
+            CanonicalUrl = "https://fydar.dev/portfolio/voxelmultiplayer",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/voxelmultiplayer/keyart-1_91x1x1200x630.webp",
+                    Alt = "Promotional material for the game 'Voxel Multiplayer'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>

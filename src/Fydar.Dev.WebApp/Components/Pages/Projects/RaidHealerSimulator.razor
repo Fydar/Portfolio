@@ -1,9 +1,22 @@
 @page "/portfolio/raidhealersimulator"
 
-<PageTitle>Raid Healer Simulator - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Raid Healer Simulator - Fydar",
+            Description = "The simulation experience of what it’s like to be a healer in an MMORPG raid, complete with a variety of abilities and a challenging boss battle.",
+            CanonicalUrl = "https://fydar.dev/portfolio/raidhealersimulator",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/raidhealersimulator/keyart-1.91x1-1200x630.webp",
+                    Alt = "Promotional material for the game 'Raid Healer Simulator'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>

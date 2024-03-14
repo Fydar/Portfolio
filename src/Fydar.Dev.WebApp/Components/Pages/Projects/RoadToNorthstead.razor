@@ -1,9 +1,22 @@
 @page "/portfolio/roadtonorthstead"
 
-<PageTitle>Road to Northstead - Fydar</PageTitle>
-
 <HeadContent>
-    <meta name="description" content="description">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Road to Northstead - Fydar",
+            Description = "The game jam visual novel with questing and crafting to survive the night.",
+            CanonicalUrl = "https://fydar.dev/portfolio/roadtonorthstead",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/roadtonorthstead/keyart-1_91x1-1200x630.webp",
+                    Alt = "Promotional material for the game 'Road to Northstead'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
 <MainFullscreen>
