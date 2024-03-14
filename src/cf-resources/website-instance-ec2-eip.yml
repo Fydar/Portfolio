@@ -223,10 +223,13 @@ Resources:
           PortMappings:
             - ContainerPort: 8060
               HostPort: 80
-              Protocol: HTTP
+              Protocol: "tcp"
             - ContainerPort: 8061
               HostPort: 443
-              Protocol: HTTPS
+              Protocol: "tcp"
+            - ContainerPort: 8061
+              HostPort: 443
+              Protocol: "udp"
           Environment:
             - Name: CONFIG_DOMAINNAME
               Value: !Ref DomainName
@@ -333,7 +336,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupName: !Sub ${DomainName} SSH/HTTP/HTTPS
-      GroupDescription: 'Allow TCP ports 22, 80 and 443 for IPv4 and IPv6'
+      GroupDescription: 'Allow TCP ports 22, 80 and 443 and UDP port 443 for IPv4 and IPv6'
       VpcId: !Ref Vpc
       SecurityGroupIngress:
         - CidrIp: 0.0.0.0/0
@@ -360,5 +363,13 @@ Resources:
           FromPort: 443
           ToPort: 443
           IpProtocol: tcp
+        - CidrIp: 0.0.0.0/0
+          FromPort: 443
+          ToPort: 443
+          IpProtocol: udp
+        - CidrIpv6: '::/0'
+          FromPort: 443
+          ToPort: 443
+          IpProtocol: udp
 
 Outputs: {}
