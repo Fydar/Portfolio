@@ -217,19 +217,9 @@ Resources:
   WebsiteInstanceTask:
     Type: AWS::ECS::TaskDefinition
     Properties:
-      NetworkMode: bridge
-      ExecutionRoleArn: !GetAtt [ECSTaskExecutionRole, Arn]
-      TaskRoleArn: !GetAtt [ECSTaskRole, Arn]
-      Cpu: 1 vCPU
-      Memory: 0.9 GB
-      RequiresCompatibilities:
-        - EC2
       ContainerDefinitions:
         - Name: website-instance
           Image: !Sub 222779217717.dkr.ecr.us-east-1.amazonaws.com/websiteinstance:${Tag}
-          Environment:
-            - Name: CONFIG_DOMAINNAME
-              Value: !Ref DomainName
           PortMappings:
             - ContainerPort: 8060
               HostPort: 80
@@ -237,12 +227,31 @@ Resources:
             - ContainerPort: 8061
               HostPort: 443
               Protocol: HTTPS
+          Environment:
+            - Name: CONFIG_DOMAINNAME
+              Value: !Ref DomainName
+          MountPoints:
+            - SourceVolume: "persistcerts"
+              ContainerPath: "/app/lettuce/"
+              ReadOnly: false
           LogConfiguration:
             LogDriver: awslogs
             Options:
               awslogs-group: 'website-logs'
               awslogs-region: 'us-east-1'
               awslogs-stream-prefix: 'website-instance'
+      ExecutionRoleArn: !GetAtt [ECSTaskExecutionRole, Arn]
+      TaskRoleArn: !GetAtt [ECSTaskRole, Arn]
+      NetworkMode: bridge
+      Volumes:
+        - Name: "persistcerts"
+          Host:
+            SourcePath: "/persistance/lettuce/"
+      RequiresCompatibilities:
+        - EC2
+      Cpu: 1 vCPU
+      Memory: 0.9 GB
+
 
 
   WebsiteInstanceService:
