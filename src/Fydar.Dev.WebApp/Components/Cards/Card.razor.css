@@ -12,53 +12,6 @@
     --pointer-relative: -10000px -10000px;
     width: fit-content;
 }
-
-    .card .card-hover {
-        opacity: 0;
-        transition: opacity 0.15s ease-in-out;
-        pointer-events: none;
-    }
-
-    .card:hover .card-hover {
-        opacity: 1;
-    }
-
-    .card.pointer-none .card-border-secondary,
-    .card.pointer-none .card-border-primary {
-        opacity: 0;
-    }
-
-    .card:focus {
-        outline: 0;
-    }
-
-        .card:focus .card-hover {
-            opacity: 1;
-        }
-
-        .card:focus.pointer-none .card-border-secondary,
-        .card:focus.pointer-none .card-border-primary {
-            opacity: 1;
-        }
-
-        .card:focus .card-outerglow .card-outerglow-tl,
-        .card:focus .card-outerglow .card-outerglow-t,
-        .card:focus .card-outerglow .card-outerglow-tr,
-        .card:focus .card-outerglow .card-outerglow-ml,
-        .card:focus .card-outerglow .card-outerglow-m,
-        .card:focus .card-outerglow .card-outerglow-mr,
-        .card:focus .card-outerglow .card-outerglow-bl,
-        .card:focus .card-outerglow .card-outerglow-b,
-        .card:focus .card-outerglow .card-outerglow-br {
-            background: var(--glow-start);
-        }
-
-        .card:focus .card-border-primary {
-            background: radial-gradient(350px 350px at var(--pointer-fixed), #ffffff 0, #e2b384 40%);
-            background-attachment: fixed;
-        }
-
-
     /* Containers */
     .card ::deep.card-container {
         padding: 2.5rem 1.35rem 1.5rem 1.35rem;
@@ -145,7 +98,6 @@
         padding: 1.75px;
         box-sizing: border-box;
         overflow: hidden;
-        width: 100%;
         opacity: 0.2;
         filter: grayscale(1);
         border-radius: 24.75px;
@@ -176,8 +128,6 @@
             background: radial-gradient(500px 500px at var(--pointer-fixed), var(--glow-start) 0, var(--glow-end) 100%);
             background-attachment: fixed;
         }
-
-
 
         /* Corners */
         .card .card-outerglow .card-outerglow-tl,
@@ -248,10 +198,7 @@
     /* Overlapping Effects */
     .card .card-border-subtle,
     .card .card-border-secondary,
-    .card .card-border-primary,
-    .card .card-background-subtle-secondary,
-    .card .card-background-secondary,
-    .card .card-background-primary {
+    .card .card-border-primary {
         position: absolute;
         top: 0;
         left: 0;
@@ -262,18 +209,18 @@
         pointer-events: none;
     }
 
-    .card .card-border-secondary,
-    .card .card-border-primary {
-        mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
-        -webkit-mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
-        mask-composite: exclude;
-        -webkit-mask-composite: xor;
-    }
-
     .card .card-border-subtle {
         transition: opacity 0.15s ease-in-out;
         border-radius: 24px;
         border: 2px solid #ffffff14;
+    }
+
+    .card .card-border-primary,
+    .card .card-border-secondary {
+        mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+        -webkit-mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
     }
 
     .card .card-border-secondary {
@@ -289,3 +236,48 @@
         background-attachment: fixed;
         border-radius: 24px;
     }
+
+    .card .card-hover {
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
+        pointer-events: none;
+    }
+
+    .card:hover .card-hover {
+        opacity: 1;
+    }
+
+    .card.pointer-none .card-border-secondary,
+    .card.pointer-none .card-border-primary {
+        opacity: 0;
+    }
+
+    .card:focus {
+        outline: 0;
+    }
+
+        .card:focus .card-hover {
+            opacity: 1;
+        }
+
+        .card:focus.pointer-none .card-border-secondary,
+        .card:focus.pointer-none .card-border-primary {
+            opacity: 1;
+        }
+
+        .card:focus .card-outerglow .card-outerglow-tl,
+        .card:focus .card-outerglow .card-outerglow-t,
+        .card:focus .card-outerglow .card-outerglow-tr,
+        .card:focus .card-outerglow .card-outerglow-ml,
+        .card:focus .card-outerglow .card-outerglow-m,
+        .card:focus .card-outerglow .card-outerglow-mr,
+        .card:focus .card-outerglow .card-outerglow-bl,
+        .card:focus .card-outerglow .card-outerglow-b,
+        .card:focus .card-outerglow .card-outerglow-br {
+            background: var(--glow-start);
+        }
+
+        .card:focus .card-border-primary {
+            background: radial-gradient(350px 350px at var(--pointer-fixed), #ffffff 0, #e2b384 40%);
+            background-attachment: fixed;
+        }
