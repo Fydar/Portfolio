@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.Hosting.Server.Features;
 using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Net.Http.Headers;
 using Serilog;
 using Serilog.Events;
@@ -178,6 +179,39 @@ public class Program
 		app.UseStatusCodePagesWithReExecute("/error/{0}");
 
 		app.MapIconLibrary<SiteIcons>("/icons.svg");
+
+		var provider = new FileExtensionContentTypeProvider();
+		provider.Mappings.Remove(".br");
+		provider.Mappings[".br"] = "application/octet-stream";
+		provider.Mappings[".data"] = "application/octet-stream";
+
+		app.UseStaticFiles(new StaticFileOptions
+		{
+			ContentTypeProvider = provider,
+			OnPrepareResponse = context =>
+			{
+				var headers = context.Context.Response.Headers;
+				if (context.File.Name.EndsWith(".wasm.br", StringComparison.OrdinalIgnoreCase))
+				{
+					headers.ContentEncoding = "br";
+					headers.ContentType = "application/wasm";
+				}
+				else if (context.File.Name.EndsWith(".data.br", StringComparison.OrdinalIgnoreCase))
+				{
+					headers.ContentEncoding = "br";
+					headers.ContentType = "application/octet-stream";
+				}
+				else if (context.File.Name.EndsWith(".js.br", StringComparison.OrdinalIgnoreCase))
+				{
+					headers.ContentEncoding = "br";
+					headers.ContentType = "application/javascript";
+				}
+				else if (context.File.Name.EndsWith(".data", StringComparison.OrdinalIgnoreCase))
+				{
+					headers.ContentType = "application/octet-stream";
+				}
+			}
+		});
 
 		app.UseStaticFiles();
 

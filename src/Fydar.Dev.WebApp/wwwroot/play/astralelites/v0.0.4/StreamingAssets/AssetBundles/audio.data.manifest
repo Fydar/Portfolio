@@ -1,0 +1,27 @@
+ManifestFileVersion: 0
+UnityVersion: 2023.2.14f1
+CRC: 4008896400
+Compression: LZ4HC
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: be208881def868e89a66a2551f8f585b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  IncrementalBuildHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: bf984e218d6191541b087fab07641992, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/AstralElites/Audio/Source/Main.asset
+- Assets/AstralElites/Audio/Source/Ambient 1.ogg
+Dependencies: []

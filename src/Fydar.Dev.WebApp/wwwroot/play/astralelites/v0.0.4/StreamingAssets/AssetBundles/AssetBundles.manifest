@@ -1,0 +1,8 @@
+ManifestFileVersion: 0
+UnityVersion: 2023.2.14f1
+CRC: 755915313
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: audio.data
+      Dependencies: {}

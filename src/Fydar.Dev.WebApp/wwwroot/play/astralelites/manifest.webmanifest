@@ -1,0 +1,17 @@
+{
+    "name": "Astral Elites",
+    "short_name": "Astral Elites",
+    "start_url": "/play/astralelites",
+    "display": "fullscreen",
+    "background_color": "#12171A",
+    "theme_color": "#000",
+    "description": "",
+    "icons": [
+        {
+            "src": "v0.0.4/TemplateData/icons/unity-logo-dark.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

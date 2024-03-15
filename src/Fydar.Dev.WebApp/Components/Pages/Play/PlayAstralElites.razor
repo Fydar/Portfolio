@@ -1,0 +1,40 @@
+@layout GameLayout
+@page "/play/astralelites"
+
+<HeadContent>
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Play Astral Elites - Fydar",
+            Description = "The physics-based and fast-paced asteroids clone for the modern era.",
+            CanonicalUrl = "https://fydar.dev/play/astralelites",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/astralelites/keyart-1_91x1-1200x630.webp",
+                    Alt = "Promotional material for the game 'Astral Elites'."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
+    <meta name="theme-color" content="#2c3840">
+    <link rel="shortcut icon" href="/play/astralelites/v0.0.4/TemplateData/favicon.ico">
+    <link rel="manifest" href="/play/astralelites/manifest.webmanifest">
+</HeadContent>
+
+
+<script>
+    var loaderUrl = "/play/astralelites/v0.0.4/Build/v0.0.4-rc7.loader.js";
+    var config = {
+        arguments: [],
+        dataUrl: "/play/astralelites/v0.0.4/Build/v0.0.4-rc7.data.br",
+        frameworkUrl: "/play/astralelites/v0.0.4/Build/v0.0.4-rc7.framework.js.br",
+        codeUrl: "/play/astralelites/v0.0.4/Build/v0.0.4-rc7.wasm.br",
+        streamingAssetsUrl: "/play/astralelites/v0.0.4/StreamingAssets",
+        companyName: "Fydar",
+        productName: "Astral Elites",
+        productVersion: "0.04",
+    };
+    serviceWorkerUrl = "/play/astralelites/ServiceWorker.js";
+</script>
