@@ -1,3 +1,4 @@
+@layout DefaultLayout
 @page "/contact"
 
 @inject IEnumerable<IContactSubmitSink> contactSubmitSinks;
@@ -23,88 +24,86 @@
     <link rel="preload" href="media/portrait-cropped.webp" as="image" />
 </HeadContent>
 
-<main>
-    <section class="container" style="max-width: 680px;">
+<section class="container" style="max-width: 680px;">
 
-        <h2>Drop me a message</h2>
+    <h2>Drop me a message</h2>
 
-        @if (isSubmitted)
-        {
-            <Callout Type="success">
-                <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-                <ChildContent>
-                    <p><b>Message successfully delivered.</b></p>
-                    <p>Typically, you can expect a response to be sent to <b>@ContactMessage.UserEmail</b> within <b>1-day</b>.</p>
-                </ChildContent>
-            </Callout>
-        }
-
-    </section>
-
-    @if (!isSubmitted)
+    @if (isSubmitted)
     {
-        <section class="container" style="max-width: 680px;">
-
-            <EditForm method="post" Model="ContactMessage" OnValidSubmit="HandleValidSubmit" FormName="contract-form">
-                <DataAnnotationsValidator />
-                <ValidationSummary></ValidationSummary>
-                <input type="hidden" name="ContactMessage.RequestId" value="@Guid.NewGuid().ToString()" />
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <InputText required type="email" id="email" @bind-Value="ContactMessage.UserEmail" placeholder="Email" class="form-control" />
-                    <small class="form-text text-muted">Your email will be used for <b>replying</b>.</small>
-
-                    <div class="feedback">
-                        <div class="feedback-required">Your email is <b>required</b>.</div>
-                        <div class="feedback-invalid">Your email must be in a <b>valid format</b>.</div>
-                    </div>
-                </div>
-
-                <label for="emailconfirm" class="robotsonly"></label>
-                <InputText id="emailconfirm" @bind-Value="ContactMessage.ConfirmUserEmail" class="robotsonly" autocomplete="off" tabindex="-1" />
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <InputText required minlength="2" id="subject" @bind-Value="ContactMessage.UserSubject" placeholder="Subject" class="form-control" autocomplete="off" />
-
-                    <div class="feedback">
-                        <div class="feedback-required">A message subject is <b>required</b>.</div>
-                        <div class="feedback-invalid">The subject has to be <b>2 characters</b> or more.</div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="body">Body</label>
-                    <InputTextArea required minlength="10" id="body" @bind-Value="ContactMessage.UserBody" placeholder="Body" class="form-control" rows="16" autocomplete="off" style=" min-height: 220px; min-width: 100%; max-width: 100%;" />
-
-                    <div class="feedback">
-                        <div class="feedback-required">A message body is <b>required</b>.</div>
-                        <div class="feedback-invalid">The body has to be <b>10 characters</b> or more.</div>
-                    </div>
-                </div>
-
-                <div class="form-group" style="text-align: right;">
-                    <button class="form-btn form-btn-primary" type="submit">Send</button>
-                </div>
-            </EditForm>
-        </section>
-    }
-
-    <section class="container" style="max-width: 680px;">
-
-        <h2>Send me an email</h2>
-
-        <Callout Type="primary">
+        <Callout Type="success">
             <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
             <ChildContent>
-                <p>If you wish to email me directly, feel free to email me at: <ScrapeProofLink LinkText="contact@fydar.dev" LinkDestination="mailto:contact@fydar.dev"></ScrapeProofLink></p>
-                <small>Either way, it both ends up in the same, readily-checked inbox!</small>
+                <p><b>Message successfully delivered.</b></p>
+                <p>Typically, you can expect a response to be sent to <b>@ContactMessage.UserEmail</b> within <b>1-day</b>.</p>
             </ChildContent>
         </Callout>
+    }
 
+</section>
+
+@if (!isSubmitted)
+{
+    <section class="container" style="max-width: 680px;">
+
+        <EditForm method="post" Model="ContactMessage" OnValidSubmit="HandleValidSubmit" FormName="contract-form">
+            <DataAnnotationsValidator />
+            <ValidationSummary></ValidationSummary>
+            <input type="hidden" name="ContactMessage.RequestId" value="@Guid.NewGuid().ToString()" />
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <InputText required type="email" id="email" @bind-Value="ContactMessage.UserEmail" placeholder="Email" class="form-control" />
+                <small class="form-text text-muted">Your email will be used for <b>replying</b>.</small>
+
+                <div class="feedback">
+                    <div class="feedback-required">Your email is <b>required</b>.</div>
+                    <div class="feedback-invalid">Your email must be in a <b>valid format</b>.</div>
+                </div>
+            </div>
+
+            <label for="emailconfirm" class="robotsonly"></label>
+            <InputText id="emailconfirm" @bind-Value="ContactMessage.ConfirmUserEmail" class="robotsonly" autocomplete="off" tabindex="-1" />
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <InputText required minlength="2" id="subject" @bind-Value="ContactMessage.UserSubject" placeholder="Subject" class="form-control" autocomplete="off" />
+
+                <div class="feedback">
+                    <div class="feedback-required">A message subject is <b>required</b>.</div>
+                    <div class="feedback-invalid">The subject has to be <b>2 characters</b> or more.</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="body">Body</label>
+                <InputTextArea required minlength="10" id="body" @bind-Value="ContactMessage.UserBody" placeholder="Body" class="form-control" rows="16" autocomplete="off" style=" min-height: 220px; min-width: 100%; max-width: 100%;" />
+
+                <div class="feedback">
+                    <div class="feedback-required">A message body is <b>required</b>.</div>
+                    <div class="feedback-invalid">The body has to be <b>10 characters</b> or more.</div>
+                </div>
+            </div>
+
+            <div class="form-group" style="text-align: right;">
+                <button class="form-btn form-btn-primary" type="submit">Send</button>
+            </div>
+        </EditForm>
     </section>
-</main>
+}
+
+<section class="container" style="max-width: 680px;">
+
+    <h2>Send me an email</h2>
+
+    <Callout Type="primary">
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>
+            <p>If you wish to email me directly, feel free to email me at: <ScrapeProofLink LinkText="contact@fydar.dev" LinkDestination="mailto:contact@fydar.dev"></ScrapeProofLink></p>
+            <small>Either way, it both ends up in the same, readily-checked inbox!</small>
+        </ChildContent>
+    </Callout>
+
+</section>
 
 @code {
     private bool isSubmitted = false;

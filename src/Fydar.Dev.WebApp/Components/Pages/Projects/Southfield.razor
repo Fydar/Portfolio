@@ -1,3 +1,4 @@
+@layout DefaultLayout
 @page "/portfolio/southfield"
 
 <HeadContent>
@@ -19,131 +20,127 @@
     <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
-<MainFullscreen>
+<section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
 
-    <section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
+    <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
+        <source src="/media/southfield/background.1440p.60fps.h265.mp4?v=1" type='video/mp4; codecs="hvc1.1.2.L150.90"; profiles="isom,iso2,mp41"'>
+        <source src="/media/southfield/background.1440p.30fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d4029"; profiles="isom,iso2,avc1,mp41"'>
+    </video>
 
-        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
-            <source src="/media/southfield/background.1440p.60fps.h265.mp4?v=1" type='video/mp4; codecs="hvc1.1.2.L150.90"; profiles="isom,iso2,mp41"'>
-            <source src="/media/southfield/background.1440p.30fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d4029"; profiles="isom,iso2,avc1,mp41"'>
-        </video>
+</section>
 
-    </section>
+<section class="landing-footer">
 
-    <section class="landing-footer">
+    <picture>
+        <img class="titlecard" src="media/southfield/titlecard.svg?v=1" alt="Title card for the game 'Southfield'." />
+    </picture>
 
-        <picture>
-            <img class="titlecard" src="media/southfield/titlecard.svg?v=1" alt="Title card for the game 'Southfield'." />
-        </picture>
+    <SteamPlayButton href="https://store.steampowered.com/app/2076210/Southfield/">Wishlist on Steam</SteamPlayButton>
 
-        <SteamPlayButton href="https://store.steampowered.com/app/2076210/Southfield/">Wishlist on Steam</SteamPlayButton>
+</section>
 
-    </section>
+<section class="container">
 
-    <section class="container">
+    <p>Weird farming meets silly physics, combine crops with unpredictable effects, build your dream farmstead, and experiment with automation.</p>
 
-        <p>Weird farming meets silly physics, combine crops with unpredictable effects, build your dream farmstead, and experiment with automation.</p>
-
-        <p>I made many tools to empower artists by automating parts of their previous workflows; chief amongst which were tools for the automation of <b>screenshot capture</b> for <b>icon generation</b>, <b>gradient recolouring</b>, <b>texture atlasing</b>, <b>level design tools for terrains</b>, <b>texture generation</b>, and <b>procedural generation</b>.</p>
+    <p>I made many tools to empower artists by automating parts of their previous workflows; chief amongst which were tools for the automation of <b>screenshot capture</b> for <b>icon generation</b>, <b>gradient recolouring</b>, <b>texture atlasing</b>, <b>level design tools for terrains</b>, <b>texture generation</b>, and <b>procedural generation</b>.</p>
 
 
-        <p class="heading-prefix">Tooling for</p>
-        <h2>Gradient Recolouring</h2>
+    <p class="heading-prefix">Tooling for</p>
+    <h2>Gradient Recolouring</h2>
 
-        <p>Radient is a <b>gradient editor</b> I created for Unity. I created it to release as an asset on the <a href="https://assetstore.unity.com/publishers/13236" target="_blank">Unity Asset Store</a> after watching the <a href="https://youtu.be/YZWKdw03Gls?t=853" target="_blank">Unite Europe 2017 talk detailing the VFX behind the game 'Spellsouls'</a>.</p>
+    <p>Radient is a <b>gradient editor</b> I created for Unity. I created it to release as an asset on the <a href="https://assetstore.unity.com/publishers/13236" target="_blank">Unity Asset Store</a> after watching the <a href="https://youtu.be/YZWKdw03Gls?t=853" target="_blank">Unite Europe 2017 talk detailing the VFX behind the game 'Spellsouls'</a>.</p>
 
-        <p>Something that the original version of Radient had (and which unfortunately didn't get implemented in Southfield) was alternate blend spaces to improve colour interpolation.</p>
+    <p>Something that the original version of Radient had (and which unfortunately didn't get implemented in Southfield) was alternate blend spaces to improve colour interpolation.</p>
 
-        <picture class="media">
-            <img src="/media/radient/gradient-editor.png?v=1" alt="The gradient editor for Radient featuring a gradient blending in the CIEXYZ colour space." loading="lazy" />
-        </picture>
+    <picture class="media">
+        <img src="/media/radient/gradient-editor.png?v=1" alt="The gradient editor for Radient featuring a gradient blending in the CIEXYZ colour space." loading="lazy" />
+    </picture>
 
-        <p>I created an updated version of Radient for <b>Southfield</b> that used vertical gradients (instead of the horizontal ones I was previously using) which inspired me to take up the project under the name <b>Procedural Assets</b> in my spare time - and good thing I did, because it turns out that the version I created for <b>Radical Forge</b> started having rare errors in the build.</p>
+    <p>I created an updated version of Radient for <b>Southfield</b> that used vertical gradients (instead of the horizontal ones I was previously using) which inspired me to take up the project under the name <b>Procedural Assets</b> in my spare time - and good thing I did, because it turns out that the version I created for <b>Radical Forge</b> started having rare errors in the build.</p>
 
-        <p>This was an incredible oppertunity for me to explore new technologies for creating procedurally generated assets for a Unity project.</p>
+    <p>This was an incredible oppertunity for me to explore new technologies for creating procedurally generated assets for a Unity project.</p>
 
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling simplified the management of hundreds of colour palettes into an <b>asset-based workflow</b>.</ChildContent>
-        </Callout>
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling simplified the management of hundreds of colour palettes into an <b>asset-based workflow</b>.</ChildContent>
+    </Callout>
 
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling enabled artists to be able to freely adjust gradients <b>within the editor</b>.</ChildContent>
-        </Callout>
-
-
-        <p class="heading-prefix">Tooling for</p>
-        <h2>Texture Atlasing</h2>
-
-        <p>To create the texture atlasing tool, I took the rewritten gradient palette tool and turned it up to 100. Instead of generating simple gradients using pixel manipulation, I needed to use shaders and GPU rendering to draw multiple textures onto a texture atlas.</p>
-
-        <p>In the future, I would like to rewrite Packbook. It would be good if I could make the the system flexible enough to be able to combine the texture atlasing tool with the gradient palette tool so that I can pack them together using the same mechanisms.</p>
-
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling <b>completely automated</b> the creation and maintainence of texture atlases.</ChildContent>
-        </Callout>
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling enabled artists to be able to freely adjust gradients <b>within the editor</b>.</ChildContent>
+    </Callout>
 
 
-        <p class="heading-prefix">Tooling for</p>
-        <h2>Icon Generation</h2>
+    <p class="heading-prefix">Tooling for</p>
+    <h2>Texture Atlasing</h2>
 
-        <p>I created a tool called <b>Holodrone</b> to automate the process of generating icons. I originally created this tool for a personal project, so when I ported the tool to <b>Southfield</b> I added <b>HDRP</b> support.</p>
+    <p>To create the texture atlasing tool, I took the rewritten gradient palette tool and turned it up to 100. Instead of generating simple gradients using pixel manipulation, I needed to use shaders and GPU rendering to draw multiple textures onto a texture atlas.</p>
 
-        <p>To better support the <b>Southfield</b> art style, I created a custom post-processing stack along with a signed-distance field algorithmn to add outlines and shadows to the generated icons. This was generated on the <b>GPU</b> using a shader.</p>
+    <p>In the future, I would like to rewrite Packbook. It would be good if I could make the the system flexible enough to be able to combine the texture atlasing tool with the gradient palette tool so that I can pack them together using the same mechanisms.</p>
 
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling preserved the environment used to render the icons so adjustments can be made in the future.</ChildContent>
-        </Callout>
-
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling allowed icons to be updated in bulk (for example, adding a shadow to all icons).</ChildContent>
-        </Callout>
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling <b>completely automated</b> the creation and maintainence of texture atlases.</ChildContent>
+    </Callout>
 
 
-        <p class="heading-prefix">Tooling for</p>
-        <h2>Level Design and Procedural Generation</h2>
+    <p class="heading-prefix">Tooling for</p>
+    <h2>Icon Generation</h2>
 
-        <p>Something that I unfortunately can't show without permission is my Level Brush and Cluster Designer tools. These are tools that allows a Level Designer to create "cluster designs" (which act as rulesets to generating random clusters of props) and to place them directly into the scene.</p>
+    <p>I created a tool called <b>Holodrone</b> to automate the process of generating icons. I originally created this tool for a personal project, so when I ported the tool to <b>Southfield</b> I added <b>HDRP</b> support.</p>
 
-        <p>The world of <b>Southfield</b> is vast, often requiring many individual props (pebbles, rocks, bushes, flowers, e.t.c) to be placed into the scene.</p>
+    <p>To better support the <b>Southfield</b> art style, I created a custom post-processing stack along with a signed-distance field algorithmn to add outlines and shadows to the generated icons. This was generated on the <b>GPU</b> using a shader.</p>
 
-        <picture class="media-wide">
-            <img src="/media/southfield/screenshot-exploration.jpg?v=1" alt="The player character exploring the world with a companion." loading="lazy" />
-        </picture>
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling preserved the environment used to render the icons so adjustments can be made in the future.</ChildContent>
+    </Callout>
 
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling allowed our Level Designers to quickly create to <b>quickly populate</b> the forests and other biomes.</ChildContent>
-        </Callout>
-
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling was adapted from a design-time generator to a runtime generator to allow for <b>procedural world generation</b>.</ChildContent>
-        </Callout>
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling allowed icons to be updated in bulk (for example, adding a shadow to all icons).</ChildContent>
+    </Callout>
 
 
-        <p class="heading-prefix">Tooling for</p>
-        <h2>Cinematic Camera Locomotion</h2>
+    <p class="heading-prefix">Tooling for</p>
+    <h2>Level Design and Procedural Generation</h2>
 
-        <p>Much of the game trailer was recorded using my cinematic camera controller.</p>
+    <p>Something that I unfortunately can't show without permission is my Level Brush and Cluster Designer tools. These are tools that allows a Level Designer to create "cluster designs" (which act as rulesets to generating random clusters of props) and to place them directly into the scene.</p>
 
-        <p>I created a camera controller designed with <b>cinematic locomotion</b> in mind. This meant adding spring systems so that subtle movement can be added to complement the camera movements.</p>
+    <p>The world of <b>Southfield</b> is vast, often requiring many individual props (pebbles, rocks, bushes, flowers, e.t.c) to be placed into the scene.</p>
 
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling enabled our content specialists to <b>capture gameplay footage</b> from different angles.</ChildContent>
-        </Callout>
+    <picture class="media-wide">
+        <img src="/media/southfield/screenshot-exploration.jpg?v=1" alt="The player character exploring the world with a companion." loading="lazy" />
+    </picture>
 
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>My tooling was exposed to players so that they can also use the <b>tool to generate content</b>.</ChildContent>
-        </Callout>
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling allowed our Level Designers to quickly create to <b>quickly populate</b> the forests and other biomes.</ChildContent>
+    </Callout>
+
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling was adapted from a design-time generator to a runtime generator to allow for <b>procedural world generation</b>.</ChildContent>
+    </Callout>
 
 
-    </section>
+    <p class="heading-prefix">Tooling for</p>
+    <h2>Cinematic Camera Locomotion</h2>
 
-</MainFullscreen>
+    <p>Much of the game trailer was recorded using my cinematic camera controller.</p>
+
+    <p>I created a camera controller designed with <b>cinematic locomotion</b> in mind. This meant adding spring systems so that subtle movement can be added to complement the camera movements.</p>
+
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling enabled our content specialists to <b>capture gameplay footage</b> from different angles.</ChildContent>
+    </Callout>
+
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>My tooling was exposed to players so that they can also use the <b>tool to generate content</b>.</ChildContent>
+    </Callout>
+
+
+</section>

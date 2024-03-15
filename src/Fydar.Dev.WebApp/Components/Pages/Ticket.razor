@@ -1,8 +1,9 @@
+@layout DefaultLayout
+@page "/ticket/{ticketId}"
 @using Fydar.Dev.Services.EmailTickets;
 @using Fydar.Dev.Services.EmailTickets.Models;
 @using MimeKit
 
-@page "/ticket/{ticketId}"
 @attribute [StreamRendering(true)]
 
 @inject IEmailReaderService emailReaderService;

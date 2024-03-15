@@ -1,3 +1,4 @@
+@layout DefaultLayout
 @page "/portfolio/astralelites"
 
 <HeadContent>
@@ -19,39 +20,35 @@
     <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
-<MainFullscreen>
+<section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
 
-    <section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
+    <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
+        <source src="/media/astralelites/background.mp4?v=1" type="video/mp4">
+    </video>
 
-        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
-            <source src="/media/astralelites/background.mp4?v=1" type="video/mp4">
-        </video>
+</section>
 
-    </section>
+<section class="landing-footer">
 
-    <section class="landing-footer">
+    <picture>
+        <img class="titlecard" src="media/astralelites/titlecard.svg?v=1" alt="Title card for the game 'Astral Elites'." />
+    </picture>
 
-        <picture>
-            <img class="titlecard" src="media/astralelites/titlecard.svg?v=1" alt="Title card for the game 'Astral Elites'." />
-        </picture>
+    <SteamPlayButton href="https://fydar.github.io/AstralElites/">Play in Browser</SteamPlayButton>
 
-        <SteamPlayButton href="https://fydar.github.io/AstralElites/">Play in Browser</SteamPlayButton>
+</section>
 
-    </section>
+<section class="container">
 
-    <section class="container">
+    <h1>Astral Elites</h1>
 
-        <h1>Astral Elites</h1>
+    <p>The physics-based and fast-paced asteroid clone for the modern era, complete with Discord integration.</p>
 
-        <p>The physics-based and fast-paced asteroid clone for the modern era, complete with Discord integration.</p>
+    <p>This project started as an 8-hour code interview for my position at <a href="/company/tt-games">TT Games</a>, but I found that it was a good playground for testing new programming concepts.</p>
 
-        <p>This project started as an 8-hour code interview for my position at <a href="/company/tt-games">TT Games</a>, but I found that it was a good playground for testing new programming concepts.</p>
+    <h2>Discord Integration</h2>
 
-        <h2>Discord Integration</h2>
+    <p>One of the first things that I decided to implement to further the development of this project was to implement the Discord SDK. The Discord SDK provides "rich-presence" integration that allows me to render the players current game state with their friends.</p>
+    <p>I also explored the multiplayer APIs that Discord exposes, but I didn't implement them on this project due to it being a single-player game (though I was tempted to make it multiplayer purely to explore these multiplayer APIs more).</p>
 
-        <p>One of the first things that I decided to implement to further the development of this project was to implement the Discord SDK. The Discord SDK provides "rich-presence" integration that allows me to render the players current game state with their friends.</p>
-        <p>I also explored the multiplayer APIs that Discord exposes, but I didn't implement them on this project due to it being a single-player game (though I was tempted to make it multiplayer purely to explore these multiplayer APIs more).</p>
-
-    </section>
-
-</MainFullscreen>
+</section>

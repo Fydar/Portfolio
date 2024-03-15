@@ -1,48 +1,16 @@
 * {
-    /* Typography */
-    --color-text-primary: #d8d8d8;
-    --color-text-headings: #e1e4e8;
-    --color-text-subtitles: #afb0b1;
     --color-text-subtle-1: #d8d8d8;
-    --color-text-subtle-2: #4a4a4a;
-    --color-text-subtle-3: #6c757d;
-    --color-text-subtle-4: #999999;
-    --color-text-link: #8799ed;
-    --color-text-error: #ff4456;
-    /* Borders */
-    --color-border-1: #242628;
     --color-border-2: #2d2f31;
     --color-border-select-1: #007bff40;
     --color-border-select-2: #80bdff;
     --color-border-error-1: #dc354540;
     --color-border-error-2: #dc3545;
-    /* Form */
     --color-form-background-autocorrect: #1c1c1f;
-    /* Backgrounds */
-    --color-background-1: rgb(25, 28, 38);
-    --color-background-2: #0d0d0d;
-    --color-background-3: #0d0d0d;
-    --color-background-4: #242628;
-    --color-background-5: #0c0c0c;
-    --color-background-footer: #202129;
-    /* Grey */
-    --color-grey-5: #202020;
-    --color-grey-6: #444444;
-    /* Green */
-    --color-green-1: #255325;
-    --color-green-6: #64b860;
-    --color-green-8: #a0ed9b;
-    /* Orange */
-    --color-orange-1: #40251c;
-    --color-orange-6: #f78e6b;
-    --color-orange-7: #f2840f;
-    --color-orange-8: #fed7b5;
 }
 
 h2 {
     margin-top: 6rem;
 }
-
 
 label {
     display: inline-block;

@@ -1,3 +1,4 @@
+@layout DefaultLayout
 @page "/portfolio/cryptcrawl"
 
 <HeadContent>
@@ -19,37 +20,33 @@
     <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
-<MainFullscreen>
+<section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
 
-    <section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
+    <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
+        <source src="/media/cryptcrawl/background.mp4?v=1" type="video/mp4">
+    </video>
 
-        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
-            <source src="/media/cryptcrawl/background.mp4?v=1" type="video/mp4">
-        </video>
+</section>
 
-    </section>
+<section class="landing-footer">
 
-    <section class="landing-footer">
+    <picture>
+        <img class="titlecard" src="media/cryptcrawl/titlecard.svg?v=1" alt="Title card for the game 'Crypt Crawl'." />
+    </picture>
 
-        <picture>
-            <img class="titlecard" src="media/cryptcrawl/titlecard.svg?v=1" alt="Title card for the game 'Crypt Crawl'." />
-        </picture>
+</section>
 
-    </section>
+<section class="container">
 
-    <section class="container">
+    <h1>Crypt Crawl</h1>
 
-        <h1>Crypt Crawl</h1>
+    <p>For myself, the really exciting part of the development of Crypt Crawl was the idea of procedural tilesets. This meant that I could generate unique tilesets for every dungeon in real-time.</p>
 
-        <p>For myself, the really exciting part of the development of Crypt Crawl was the idea of procedural tilesets. This meant that I could generate unique tilesets for every dungeon in real-time.</p>
+    <p>Procedural tilesets were accomplished using Substance Designer. At the time I was very new and I ended up creating an awful, brown tileset. The pixel-art technique that I used later informed art pipeline of <a href="/portfolio/the-dwellers">The Dwellers</a>.</p>
 
-        <p>Procedural tilesets were accomplished using Substance Designer. At the time I was very new and I ended up creating an awful, brown tileset. The pixel-art technique that I used later informed art pipeline of <a href="/portfolio/the-dwellers">The Dwellers</a>.</p>
+    <figure class="figure-image">
+        <img src="/img/crypt-crawl-gameplay.png?v=1" loading="lazy" />
+        <figcaption>Gameplay screenshot.</figcaption>
+    </figure>
 
-        <figure class="figure-image">
-            <img src="/img/crypt-crawl-gameplay.png?v=1" loading="lazy" />
-            <figcaption>Gameplay screenshot.</figcaption>
-        </figure>
-
-    </section>
-
-</MainFullscreen>
+</section>

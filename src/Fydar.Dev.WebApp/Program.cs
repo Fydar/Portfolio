@@ -3,7 +3,7 @@ using Amazon.SimpleEmail;
 using Fydar.Dev.Services.EmailTickets;
 using Fydar.Dev.WebApp.Client.Components.Pages;
 using Fydar.Dev.WebApp.Components;
-using Fydar.Dev.WebApp.Components.Icons;
+using Fydar.Dev.WebApp.Components.Pages;
 using Fydar.Dev.WebApp.Internal;
 using Fydar.Dev.WebApp.Internal.AntiforgeryNoStoreWorkaround;
 using Fydar.Dev.WebApp.Toolkit.Icons;

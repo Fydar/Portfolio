@@ -1,3 +1,4 @@
+@layout DefaultLayout
 @page "/portfolio/eitr"
 
 <HeadContent>
@@ -19,101 +20,97 @@
     <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
-<MainFullscreen>
+<section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
 
-    <section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
+    <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
+        <source src="/media/eitr/background.720p.29fps.h265.mp4?v=1" type='video/mp4; codecs="hev1.1.2.L93.90"; profiles="isom,iso2,mp41"'>
+        <source src="/media/eitr/background.720p.29fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d401f"; profiles="isom,iso2,avc1,mp41"'>
+    </video>
 
-        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
-            <source src="/media/eitr/background.720p.29fps.h265.mp4?v=1" type='video/mp4; codecs="hev1.1.2.L93.90"; profiles="isom,iso2,mp41"'>
-            <source src="/media/eitr/background.720p.29fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d401f"; profiles="isom,iso2,avc1,mp41"'>
-        </video>
+</section>
 
-    </section>
+<section class="landing-footer">
 
-    <section class="landing-footer">
+    <picture>
+        <img class="titlecard" src="media/eitr/titlecard.png?v=1" alt="Title card for the game 'Eitr'." style="image-rendering: pixelated;" />
+    </picture>
 
+    <SteamPlayButton href="https://store.steampowered.com/app/350050/EITR/">Visit on Steam</SteamPlayButton>
+
+</section>
+
+<section class="container">
+
+    <p>I joined the indie title <i>‘Eitr’</i> team as a remote programmer. I programmed many core gameplay systems such as the <b>inventory system</b>, <b>item system</b>, <b>tooltips</b>, <b>character stats</b>, <b>skill trees</b>, <b>input mapping</b>, and <b>achievements</b>.</p>
+
+    <Callout Type="primary">
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>Working on this project inspired me to work on my personal projects. Some of them can be found below.</ChildContent>
+    </Callout>
+
+    <CardGrid Size="md">
+        <Card AspectRatio="4/3" href="/portfolio/fydarbehaviour">
+            <FeaturedImage>
+                <SvgSprite class="card-image" Link="/icons.svg?v=1#icon-nodeeditor" />
+            </FeaturedImage>
+            <ChildContent>
+                <div class="card-container">
+                    <div class="row">
+                        <SvgSprite class="card-keyicon" Link="/icons.svg?v=1#icon-fydarbehaviour" Alt="An illustration of the node based editor." />
+                        <div class="column">
+                            <h3 class="card-header"><span class="subtle">Fydar.</span>Behaviour</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="card-description"><b>Data-driven</b> and <b>flexible</b> <b>node-based</b> behaviour engine for items, abilities, quests, enemies, achievements, and more.</p>
+                    </div>
+                </div>
+            </ChildContent>
+        </Card>
+        <Card AspectRatio="4/3" href="/portfolio/fydarinventory">
+            <FeaturedImage>
+                <SvgSprite class="card-image" Link="/icons.svg?v=1#icon-inventory" />
+            </FeaturedImage>
+            <ChildContent>
+                <div class="card-container">
+                    <div class="row">
+                        <SvgSprite class="card-keyicon" Link="/icons.svg?v=1#icon-fydarinventory" Alt="An illustration of the inventory system." />
+                        <div class="column">
+                            <h3 class="card-header"><span class="subtle">Fydar.</span>Inventory</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <p class="card-description">Complete item and inventory system with transactions, constraints, equipment, tooltips, and more.</p>
+                    </div>
+                </div>
+            </ChildContent>
+        </Card>
+    </CardGrid>
+
+    <p class="heading-prefix">Tooling for</p>
+    <h2>Skill Tree Editing</h2>
+
+    <p>I created a skill tree editor that is capable of editing a large quantity of nodes.</p>
+
+    <figure class="figure-image">
         <picture>
-            <img class="titlecard" src="media/eitr/titlecard.png?v=1" alt="Title card for the game 'Eitr'." style="image-rendering: pixelated;" />
+            <img loading="lazy" src="/media/eitr/skill-tree-editor-1-w900.jpg?v=1" alt="A screenshot of my skill tree editor editing a large skill tree." />
         </picture>
+        <figcaption>A skill tree for ‘Eitr’ inspired by those from <a href="https://www.pathofexile.com/">‘Path of Exile’</a>.</figcaption>
+    </figure>
 
-        <SteamPlayButton href="https://store.steampowered.com/app/350050/EITR/">Visit on Steam</SteamPlayButton>
+    <p>The skill tree went through multiple iterations thanks to the tooling provided.</p>
 
-    </section>
+    <figure class="figure-image">
+        <picture>
+            <img loading="lazy" src="/media/eitr/skill-tree-editor-2-w900.jpg?v=1" alt="A screenshot of my skill tree editor editing a smaller skill tree." />
+        </picture>
+        <figcaption>A skill tree for ‘Eitr’ inspired by Nordic runes.</figcaption>
+    </figure>
 
-    <section class="container">
+    <Callout>
+        <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
+        <ChildContent>The editor was able to provide all the tools necessary to explore different styles.</ChildContent>
+    </Callout>
 
-        <p>I joined the indie title <i>‘Eitr’</i> team as a remote programmer. I programmed many core gameplay systems such as the <b>inventory system</b>, <b>item system</b>, <b>tooltips</b>, <b>character stats</b>, <b>skill trees</b>, <b>input mapping</b>, and <b>achievements</b>.</p>
-
-        <Callout Type="primary">
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>Working on this project inspired me to work on my personal projects. Some of them can be found below.</ChildContent>
-        </Callout>
-
-        <CardGrid Size="md">
-            <Card AspectRatio="4/3" href="/portfolio/fydarbehaviour">
-                <FeaturedImage>
-                    <SvgSprite class="card-image" Link="/icons.svg?v=1#icon-nodeeditor" />
-                </FeaturedImage>
-                <ChildContent>
-                    <div class="card-container">
-                        <div class="row">
-                            <SvgSprite class="card-keyicon" Link="/icons.svg?v=1#icon-fydarbehaviour" Alt="An illustration of the node based editor." />
-                            <div class="column">
-                                <h3 class="card-header"><span class="subtle">Fydar.</span>Behaviour</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <p class="card-description"><b>Data-driven</b> and <b>flexible</b> <b>node-based</b> behaviour engine for items, abilities, quests, enemies, achievements, and more.</p>
-                        </div>
-                    </div>
-                </ChildContent>
-            </Card>
-            <Card AspectRatio="4/3" href="/portfolio/fydarinventory">
-                <FeaturedImage>
-                    <SvgSprite class="card-image" Link="/icons.svg?v=1#icon-inventory" />
-                </FeaturedImage>
-                <ChildContent>
-                    <div class="card-container">
-                        <div class="row">
-                            <SvgSprite class="card-keyicon" Link="/icons.svg?v=1#icon-fydarinventory" Alt="An illustration of the inventory system." />
-                            <div class="column">
-                                <h3 class="card-header"><span class="subtle">Fydar.</span>Inventory</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <p class="card-description">Complete item and inventory system with transactions, constraints, equipment, tooltips, and more.</p>
-                        </div>
-                    </div>
-                </ChildContent>
-            </Card>
-        </CardGrid>
-
-        <p class="heading-prefix">Tooling for</p>
-        <h2>Skill Tree Editing</h2>
-
-        <p>I created a skill tree editor that is capable of editing a large quantity of nodes.</p>
-
-        <figure class="figure-image">
-            <picture>
-                <img loading="lazy" src="/media/eitr/skill-tree-editor-1-w900.jpg?v=1" alt="A screenshot of my skill tree editor editing a large skill tree." />
-            </picture>
-            <figcaption>A skill tree for ‘Eitr’ inspired by those from <a href="https://www.pathofexile.com/">‘Path of Exile’</a>.</figcaption>
-        </figure>
-
-        <p>The skill tree went through multiple iterations thanks to the tooling provided.</p>
-
-        <figure class="figure-image">
-            <picture>
-                <img loading="lazy" src="/media/eitr/skill-tree-editor-2-w900.jpg?v=1" alt="A screenshot of my skill tree editor editing a smaller skill tree." />
-            </picture>
-            <figcaption>A skill tree for ‘Eitr’ inspired by Nordic runes.</figcaption>
-        </figure>
-
-        <Callout>
-            <Icon><SvgSprite Link="/icons.svg?v=1#icon-seal-check-fill" Alt="Check" /></Icon>
-            <ChildContent>The editor was able to provide all the tools necessary to explore different styles.</ChildContent>
-        </Callout>
-
-    </section>
-
-</MainFullscreen>
+</section>

@@ -2,22 +2,13 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" /><meta name="darkreader-lock">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="darkreader-lock">
-    <base href="/" />
-    <link rel="preload" href="inter/inter.css?v=1" as="style" />
-    <link rel="preload" href="inter/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="Fydar.Dev.WebApp.styles.css?v=1" as="style" />
-    <link rel="preload" href="site.js?v=1" as="script" />
-
-    <link rel="stylesheet" href="inter/inter.css?v=1" />
-    <link rel="stylesheet" href="Fydar.Dev.WebApp.styles.css?v=1" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=1" />
+    <meta charset="utf-8" />
+    <SectionOutlet SectionName="layoutheadcontent" />
     <HeadOutlet />
+    <SectionOutlet SectionName="layoutbodystyle" />
 </head>
 
-<body class="page">
+<body>
     <Routes />
 
     <BlazorErrorUI />
@@ -27,7 +18,6 @@
             ssr: { disableDomPreservation: true }
         });
     </script>
-    <script src="site.js?v=1"></script>
 </body>
 
 </html>

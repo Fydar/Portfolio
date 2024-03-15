@@ -2,6 +2,83 @@
 
 @inject NavigationManager NavigationManager
 
+<SectionContent SectionName="layoutheadcontent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="darkreader-lock">
+    <base href="/" />
+    <link rel="preload" href="inter/inter.css?v=1" as="style" />
+    <link rel="preload" href="inter/Inter-roman.var.woff2?v=3.19" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="Fydar.Dev.WebApp.styles.css?v=1" as="style" />
+    <link rel="preload" href="site.js?v=1" as="script" />
+
+    <link rel="stylesheet" href="inter/inter.css?v=1" />
+    <link rel="stylesheet" href="Fydar.Dev.WebApp.styles.css?v=1" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg?v=1" />
+</SectionContent>
+
+<SectionContent SectionName="layoutbodystyle">
+    <style>
+        body {
+            padding: 0;
+            border: 0;
+            margin: 0;
+            background: #161618;
+            color: var(--color-text-primary);
+            width: max-content;
+            overflow-y: scroll;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.5;
+            min-height: 100vh;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: auto;
+            font-family: 'Inter', sans-serif;
+            --color-text-primary: #d8d8d8;
+        }
+
+        @@supports (font-variation-settings: normal) {
+            body {
+                font-family: 'Inter var', sans-serif;
+            }
+        }
+
+        :root {
+            color-scheme: dark;
+        }
+
+        ::-webkit-scrollbar {
+            width: 16px;
+            height: 16px;
+        }
+
+        ::-webkit-scrollbar-corner,
+        ::-webkit-scrollbar-track {
+            background: #161618;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #3f4345;
+        }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #7b7b7b;
+            }
+
+            ::-webkit-scrollbar-corner,
+            ::-webkit-scrollbar-track:vertical,
+            ::-webkit-scrollbar-thumb:vertical {
+                border-left: 1px solid #2e2e32;
+            }
+
+            ::-webkit-scrollbar-corner,
+            ::-webkit-scrollbar-track:horizontal,
+            ::-webkit-scrollbar-thumb:horizontal {
+                border-top: 1px solid #2e2e32;
+            }
+    </style>
+</SectionContent>
+
 <header>
     <div class="glowline"></div>
     <div class="row container">
@@ -29,9 +106,12 @@
             <li class="nav-siteicon"><a href="https://www.linkedin.com/in/fydar" target="_blank"><SvgSprite Link="/icons.svg?v=1#icon-linkedin" Alt="LinkedIn" /></a></li>
         </menu>
     </div>
+
 </header>
 
-@Body
+<main>
+    @Body
+</main>
 
 <footer>
     <section class="container">
@@ -53,3 +133,5 @@
 
     </section>
 </footer>
+
+<script src="site.js?v=1"></script>

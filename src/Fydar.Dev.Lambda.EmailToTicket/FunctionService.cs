@@ -20,7 +20,7 @@ public class FunctionService
 	{
 		string? emailBuckt = Environment.GetEnvironmentVariable("CONFIG_EMAILBUCKET");
 		string? forwardTo = Environment.GetEnvironmentVariable("CONFIG_FORWARDTO");
-		
+
 		if (emailBuckt == null)
 		{
 			throw new InvalidOperationException("Failed to create function as email bucket was not defined.");
@@ -29,15 +29,15 @@ public class FunctionService
 		{
 			throw new InvalidOperationException("Failed to create function as forward to email was not defined.");
 		}
-		
+
 		var amazonS3 = new AmazonS3Client();
 		var amazonSimpleEmail = new AmazonSimpleEmailServiceClient();
-		
+
 		emailReaderService = new S3EmailReaderService(amazonS3, new S3EmailReaderServiceConfiguration()
 		{
 			Bucket = emailBuckt
 		});
-		
+
 		emailSinkService = new SESNotifyingService(amazonSimpleEmail, forwardTo);
 	}
 
