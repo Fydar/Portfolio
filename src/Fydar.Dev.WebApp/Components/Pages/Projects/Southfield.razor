@@ -20,24 +20,30 @@
     <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
-<section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
+<section class="fullscreen">
+    <div class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
 
-    <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
-        <source src="/media/southfield/background.1440p.60fps.h265.mp4?v=1" type='video/mp4; codecs="hvc1.1.2.L150.90"; profiles="isom,iso2,mp41"'>
-        <source src="/media/southfield/background.1440p.30fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d4029"; profiles="isom,iso2,avc1,mp41"'>
-    </video>
+        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
+            <source src="/media/southfield/background.1440p.60fps.h265.mp4?v=1" type='video/mp4; codecs="hvc1.1.2.L150.90"; profiles="isom,iso2,mp41"'>
+            <source src="/media/southfield/background.1440p.30fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d4029"; profiles="isom,iso2,avc1,mp41"'>
+        </video>
 
+    </div>
+
+    <div class="fullscreen-footer">
+
+        <picture>
+            <img class="titlecard" src="media/southfield/titlecard.svg?v=1" alt="Title card for the game 'Southfield'." />
+        </picture>
+
+        <SteamPlayButton href="https://store.steampowered.com/app/2076210/Southfield/">Wishlist on Steam</SteamPlayButton>
+
+    </div>
 </section>
 
-<section class="landing-footer">
+<aside>
 
-    <picture>
-        <img class="titlecard" src="media/southfield/titlecard.svg?v=1" alt="Title card for the game 'Southfield'." />
-    </picture>
-
-    <SteamPlayButton href="https://store.steampowered.com/app/2076210/Southfield/">Wishlist on Steam</SteamPlayButton>
-
-</section>
+</aside>
 
 <section class="container">
 

@@ -20,24 +20,30 @@
     <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
-<section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
+<section class="fullscreen">
+    <div class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
 
-    <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
-        <source src="/media/legostarwarsbattles/background.1080p.30fps.h265.mp4?v=1" type='video/mp4; codecs="hvc1.1.2.L120.90"; profiles="isom,iso2,mp41"'>
-        <source src="/media/legostarwarsbattles/background.1080p.30fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d4028"; profiles="isom,iso2,avc1,mp41"'>
-    </video>
+        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
+            <source src="/media/legostarwarsbattles/background.1080p.30fps.h265.mp4?v=1" type='video/mp4; codecs="hvc1.1.2.L120.90"; profiles="isom,iso2,mp41"'>
+            <source src="/media/legostarwarsbattles/background.1080p.30fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d4028"; profiles="isom,iso2,avc1,mp41"'>
+        </video>
 
+    </div>
+
+    <div class="fullscreen-footer">
+
+        <picture>
+            <img class="titlecard" src="media/legostarwarsbattles/titlecard.png?v=1" alt="Title card for the game 'LEGO® Star Wars™ Battles'." />
+        </picture>
+
+        <SteamPlayButton href="https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698">Apple Arcade</SteamPlayButton>
+
+    </div>
 </section>
 
-<section class="landing-footer">
+<aside>
 
-    <picture>
-        <img class="titlecard" src="media/legostarwarsbattles/titlecard.png?v=1" alt="Title card for the game 'LEGO® Star Wars™ Battles'." />
-    </picture>
-
-    <SteamPlayButton href="https://apps.apple.com/us/app/lego-star-wars-battles/id1563174698">Apple Arcade</SteamPlayButton>
-
-</section>
+</aside>
 
 <section class="container">
 

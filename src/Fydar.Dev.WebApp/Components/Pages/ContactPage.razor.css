@@ -27,10 +27,6 @@ p {
     text-align: left;
 }
 
-.form-group {
-    margin-bottom: 1rem;
-}
-
 ::deep .robotsonly {
     opacity: 0;
     position: absolute;
@@ -123,33 +119,38 @@ p {
     transition: opacity ease-in-out 0.1s;
 }
 
-::deep .form-group:has(*:user-invalid) .feedback {
-    opacity: 1;
+::deep .form-group {
+    margin-bottom: 1rem;
 }
 
-::deep .form-group:has(*:required) label::after {
-    content: "*";
-    color: #ff4456;
-    padding-left: 2px;
-    display: inline-block;
-    font-size: 1.2em;
-    line-height: 1em;
-}
+    ::deep .form-group:has(*:user-invalid) .feedback {
+        opacity: 1;
+    }
 
-/* If it's required and it's empty, show the required message */
-::deep .feedback .feedback-required {
-    display: none;
-}
+    ::deep .form-group:has(*:required) label::after {
+        content: "*";
+        color: #ff4456;
+        padding-left: 2px;
+        display: inline-block;
+        font-size: 1.2em;
+        line-height: 1em;
+    }
 
-::deep .form-group:has(*:user-invalid):has(*:required):has(textarea:placeholder-shown) .feedback .feedback-required,
-::deep .form-group:has(*:user-invalid):has(*:required):has(input:placeholder-shown) .feedback .feedback-required {
-    display: block;
-}
+    /* If it's required and it's empty, show the required message */
 
-::deep .form-group:has(*:user-invalid):has(*:required):has(textarea:placeholder-shown) .feedback .feedback-invalid,
-::deep .form-group:has(*:user-invalid):has(*:required):has(input:placeholder-shown) .feedback .feedback-invalid {
-    display: none;
-}
+    ::deep .form-group:has(*:user-invalid):has(*:required):has(textarea:placeholder-shown) .feedback .feedback-required,
+    ::deep .form-group:has(*:user-invalid):has(*:required):has(input:placeholder-shown) .feedback .feedback-required {
+        display: block;
+    }
+
+    ::deep .form-group:has(*:user-invalid):has(*:required):has(textarea:placeholder-shown) .feedback .feedback-invalid,
+    ::deep .form-group:has(*:user-invalid):has(*:required):has(input:placeholder-shown) .feedback .feedback-invalid {
+        display: none;
+    }
+
+    ::deep .form-group .feedback .feedback-required {
+        display: none;
+    }
 
 /* By adding placeholders, we can use CSS to detect whether the field is empty. Hide the placeholder */
 ::deep input::placeholder,
@@ -167,39 +168,6 @@ small {
     display: block;
     margin-top: .4rem;
 }
-
-.form-btn {
-    display: inline-block;
-    font-weight: 400;
-    color: #212529;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 8px;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.form-btn-primary {
-    color: #fff;
-    background-color: #087cbf;
-    border-color: #087cbf;
-    letter-spacing: 1px;
-}
-
-    .form-btn-primary:focus {
-        color: #fff;
-        background-color: #1b8ed1;
-        border-color: #1b8ed1;
-        box-shadow: 0 0 0 5px rgba(38,143,255,.5);
-    }
 
 .btn {
     display: inline-block;
@@ -221,20 +189,16 @@ small {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.btn-outline-secondary {
-    color: #6c757d;
-    border-color: #6c757d;
-}
-
-    .btn-outline-secondary:hover {
+    .btn.btn-primary {
         color: #fff;
-        background-color: #6c757d;
-        border-color: #6c757d;
+        background-color: #087cbf;
+        border-color: #087cbf;
+        letter-spacing: 1px;
     }
 
-.btn-lg {
-    padding: .5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 8px;
-}
+        .btn.btn-primary:focus {
+            color: #fff;
+            background-color: #1b8ed1;
+            border-color: #1b8ed1;
+            box-shadow: 0 0 0 5px rgba(38,143,255,.5);
+        }

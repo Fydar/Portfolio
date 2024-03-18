@@ -3,8 +3,8 @@
 .card-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 3rem 3rem;
-    margin: 3rem 0;
+    grid-gap: 20px 20px;
+    margin: 20px 0;
 }
 
     .card-grid.card-grid-md {

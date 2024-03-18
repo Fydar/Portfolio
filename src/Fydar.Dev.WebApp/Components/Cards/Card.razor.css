@@ -10,7 +10,7 @@
     padding: 1.75px;
     transition: box-shadow 0.15s;
     --pointer-relative: -10000px -10000px;
-    width: fit-content;
+    width: auto;
 }
     /* Containers */
     .card ::deep.card-container {

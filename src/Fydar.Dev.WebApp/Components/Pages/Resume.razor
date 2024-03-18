@@ -6,20 +6,24 @@
 <PageTitle>Resume - Fydar</PageTitle>
 
 <HeadContent>
-    <meta name="description" content="Fydar is a game developer and engineer who thrives when pushing technical boundaries and creating memorable experiences.">
+    @{
+        var openGraphModel = new OpenGraphModel()
+        {
+            Title = "Resume - Fydar",
+            Description = "Fydar is a game developer and engineer who thrives when pushing technical boundaries and creating memorable experiences.",
+            CanonicalUrl = "https://fydar.dev/resume",
+            Properties = [
+                new OpenGraphModelImage()
+                {
+                    Url = "https://fydar.dev/media/header.webp",
+                    Alt = "A portrait of Fydar in an anime artstyle."
+                }
+            ]
+        };
+    }
+    <OpenGraphComponent Model="@openGraphModel" />
 
-    <meta property="og:url" content="https://fydar.dev/resume">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Resume - Fydar">
-    <meta property="og:description" content="Fydar is a game developer who thrives when pushing technical boundaries and creating memorable experiences">
-    <meta property="og:image" content="https://fydar.dev/media/header.webp">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="fydar.dev">
-    <meta property="twitter:url" content="https://fydar.dev/resume">
-    <meta name="twitter:title" content="Resume - Fydar">
-    <meta name="twitter:description" content="Fydar is a game developer who thrives when pushing technical boundaries and creating memorable experiences">
-    <meta name="twitter:image" content="https://fydar.dev/media/header.webp">
+    <link rel="preload" href="media/portrait-cropped.webp" as="image" />
 </HeadContent>
 
 @{
@@ -31,7 +35,7 @@
     }
 }
 
-<main class="resume">
+<article class="resume">
 
     <section class="page page-coverletter">
 
@@ -583,5 +587,4 @@
         </div>
     </section>
 
-
-</main>
+</article>

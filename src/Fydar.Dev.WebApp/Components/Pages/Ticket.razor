@@ -10,26 +10,23 @@
 
 <PageTitle>Ticket - Fydar</PageTitle>
 
-<main>
-    <section class="container" style="max-width: 900px;">
+<section class="container" style="max-width: 900px;">
         
-        @if (mimeMessage == null)
-        {
-            <p><em>Loading...</em></p>
-        }
-        else
-        {
-            <p class="ticket-from">@mimeMessage.From.ToString()</p>
+    @if (mimeMessage == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <p class="ticket-from">@mimeMessage.From.ToString()</p>
 
-            <p class="ticket-to">@mimeMessage.To.ToString()</p>
+        <p class="ticket-to">@mimeMessage.To.ToString()</p>
 
-            <div class="ticket-body">
-                @((MarkupString)(mimeMessage.HtmlBody?.ToString() ?? mimeMessage.TextBody?.ToString() ?? ""))
-            </div>
-        }
-    </section>
-
-</main>
+        <div class="ticket-body">
+            @((MarkupString)(mimeMessage.HtmlBody?.ToString() ?? mimeMessage.TextBody?.ToString() ?? ""))
+        </div>
+    }
+</section>
 
 @code {
     [Parameter]

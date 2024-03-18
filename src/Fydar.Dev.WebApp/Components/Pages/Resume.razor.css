@@ -2,6 +2,10 @@
 .resume {
     z-index: 1;
     padding: 2rem 1rem 1rem 1rem;
+    overflow-x: scroll;
+    width: 100%;
+    grid-column: 1 / -1;
+    box-sizing: border-box;
 }
 
     .resume .page {

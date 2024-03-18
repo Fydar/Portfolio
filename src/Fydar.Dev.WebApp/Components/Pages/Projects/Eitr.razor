@@ -20,24 +20,30 @@
     <OpenGraphComponent Model="@openGraphModel" />
 </HeadContent>
 
-<section class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
+<section class="fullscreen">
+    <div class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
 
-    <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
-        <source src="/media/eitr/background.720p.29fps.h265.mp4?v=1" type='video/mp4; codecs="hev1.1.2.L93.90"; profiles="isom,iso2,mp41"'>
-        <source src="/media/eitr/background.720p.29fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d401f"; profiles="isom,iso2,avc1,mp41"'>
-    </video>
+        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
+            <source src="/media/eitr/background.720p.29fps.h265.mp4?v=1" type='video/mp4; codecs="hev1.1.2.L93.90"; profiles="isom,iso2,mp41"'>
+            <source src="/media/eitr/background.720p.29fps.h264.mp4?v=1" type='video/mp4; codecs="avc1.4d401f"; profiles="isom,iso2,avc1,mp41"'>
+        </video>
 
+    </div>
+
+    <div class="fullscreen-footer">
+
+        <picture>
+            <img class="titlecard" src="media/eitr/titlecard.png?v=1" alt="Title card for the game 'Eitr'." style="image-rendering: pixelated;" />
+        </picture>
+
+        <SteamPlayButton href="https://store.steampowered.com/app/350050/EITR/">Visit on Steam</SteamPlayButton>
+
+    </div>
 </section>
 
-<section class="landing-footer">
+<aside>
 
-    <picture>
-        <img class="titlecard" src="media/eitr/titlecard.png?v=1" alt="Title card for the game 'Eitr'." style="image-rendering: pixelated;" />
-    </picture>
-
-    <SteamPlayButton href="https://store.steampowered.com/app/350050/EITR/">Visit on Steam</SteamPlayButton>
-
-</section>
+</aside>
 
 <section class="container">
 
