@@ -233,10 +233,6 @@ Resources:
           Environment:
             - Name: CONFIG_DOMAINNAME
               Value: !Ref DomainName
-          MountPoints:
-            - SourceVolume: "persistcerts"
-              ContainerPath: "/app/lettuce/"
-              ReadOnly: false
           LogConfiguration:
             LogDriver: awslogs
             Options:
@@ -246,10 +242,6 @@ Resources:
       ExecutionRoleArn: !GetAtt [ECSTaskExecutionRole, Arn]
       TaskRoleArn: !GetAtt [ECSTaskRole, Arn]
       NetworkMode: bridge
-      Volumes:
-        - Name: "persistcerts"
-          Host:
-            SourcePath: "/persistance/lettuce/"
       RequiresCompatibilities:
         - EC2
       Cpu: 1 vCPU
