@@ -23,21 +23,22 @@
     <link rel="manifest" href="/play/astralelites/manifest.webmanifest">
 </HeadContent>
 
-<script>
-    var config = {
-        companyName: "Fydar",
-        productName: "Astral Elites",
-        productVersion: "v0.0.5-rc2",
-        dataUrl: "/play/astralelites/build/v0.0.5-rc2.data.br",
-        codeUrl: "/play/astralelites/build/v0.0.5-rc2.wasm.br",
-        frameworkUrl: "/play/astralelites/build/v0.0.5-rc2.framework.js.br",
-        streamingAssetsUrl: "/play/astralelites/StreamingAssets",
-        arguments: [],
-    };
-    var loaderUrl = "/play/astralelites/build/v0.0.5-rc2.loader.js";
-</script>
-
 <EmbedUnity>
+    <Configuration>
+        <script>
+            var config = {
+                companyName: "Fydar",
+                productName: "Astral Elites",
+                productVersion: "v0.0.5-rc2",
+                dataUrl: "/play/astralelites/build/v0.0.5-rc2.data.br",
+                codeUrl: "/play/astralelites/build/v0.0.5-rc2.wasm.br",
+                frameworkUrl: "/play/astralelites/build/v0.0.5-rc2.framework.js.br",
+                streamingAssetsUrl: "/play/astralelites/StreamingAssets",
+                arguments: [],
+            };
+            var loaderUrl = "/play/astralelites/build/v0.0.5-rc2.loader.js";
+        </script>
+    </Configuration>
     <Placeholder>
         <img src="/play/astralelites/favicon.ico" alt="The logo for 'Astral Elites'." style="width: 200px; max-width: 90%; margin-bottom: 32px;" />
     </Placeholder>

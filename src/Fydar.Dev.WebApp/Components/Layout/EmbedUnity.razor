@@ -9,6 +9,8 @@
     <div class="embed-warning" id="@UnityWarning"></div>
 </div>
 
+@Configuration
+
 <script>
     var container = document.querySelector("#@UnityContainer");
     var canvas = document.querySelector("#@UnityCanvas");
@@ -121,6 +123,9 @@
     public string UnityContainer { get; set; } = "unitycontainer";
     public string UnityCanvas { get; set; } = "unitycanvas";
     public string UnityWarning { get; set; } = "unitywarning";
+
+    [Parameter]
+    public RenderFragment? Configuration { get; set; }
 
     [Parameter]
     public RenderFragment? Placeholder { get; set; }
