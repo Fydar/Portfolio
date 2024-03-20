@@ -1,4 +1,4 @@
-<a href="@href" class="card pointer-relative" style="aspect-ratio:@AspectRatio">
+<a @attributes="AdditionalAttributes" class="card pointer-relative" style="aspect-ratio:@AspectRatio">
 
     @FeaturedImage
 
@@ -30,8 +30,8 @@
     public RenderFragment? ChildContent { get; set; }
 
     [Parameter]
-    public string href { get; set; } = string.Empty;
-
-    [Parameter]
     public string AspectRatio { get; set; } = string.Empty;
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IDictionary<string, object>? AdditionalAttributes { get; set; }
 }

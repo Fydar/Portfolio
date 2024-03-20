@@ -1,4 +1,4 @@
-<svg class="@(@class)" role="img">
+<svg @attributes="AdditionalAttributes" role="img">
     @if (!string.IsNullOrEmpty(Alt))
     {
         <title>@Alt</title>
@@ -8,11 +8,11 @@
 
 @code {
     [Parameter]
-    public string @class { get; set; } = string.Empty;
-
-    [Parameter]
     public string Link { get; set; } = string.Empty;
 
     [Parameter]
     public string Alt { get; set; } = string.Empty;
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IDictionary<string, object>? AdditionalAttributes { get; set; }
 }

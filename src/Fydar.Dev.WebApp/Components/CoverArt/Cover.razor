@@ -1,4 +1,4 @@
-<a href="@href" class="cover" style="aspect-ratio: 6 / 9">
+<a @attributes="AdditionalAttributes" class="cover">
 
     <div class="cover-background">
         @Background
@@ -17,6 +17,6 @@
     [Parameter]
     public RenderFragment? Overlay { get; set; }
 
-    [Parameter]
-    public string href { get; set; } = string.Empty;
+    [Parameter(CaptureUnmatchedValues = true)]
+    public IDictionary<string, object>? AdditionalAttributes { get; set; }
 }
