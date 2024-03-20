@@ -1,11 +1,11 @@
 ManifestFileVersion: 0
 UnityVersion: 2023.2.14f1
-CRC: 4008896400
+CRC: 914181115
 Compression: LZ4HC
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: be208881def868e89a66a2551f8f585b
+    Hash: 632cffb56853fbfb6307c3f84fb16237
   TypeTreeHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -22,6 +22,6 @@ ClassTypes:
   Script: {instanceID: 0}
 SerializeReferenceClassIdentifiers: []
 Assets:
-- Assets/AstralElites/Audio/Source/Main.asset
-- Assets/AstralElites/Audio/Source/Ambient 1.ogg
+- Assets/AstralElites/Gameplay/Audio/Ambient/Main.asset
+- Assets/AstralElites/Gameplay/Audio/Ambient/Licensed/Ambient 1.ogg
 Dependencies: []

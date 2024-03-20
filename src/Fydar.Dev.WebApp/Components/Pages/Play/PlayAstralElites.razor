@@ -19,22 +19,35 @@
     }
     <OpenGraphComponent Model="@openGraphModel" />
     <meta name="theme-color" content="#2c3840">
-    <link rel="shortcut icon" href="/play/astralelites/v0.0.4/TemplateData/favicon.ico">
+    <link rel="shortcut icon" href="/play/astralelites/favicon.ico">
     <link rel="manifest" href="/play/astralelites/manifest.webmanifest">
 </HeadContent>
 
-
 <script>
-    var loaderUrl = "/play/astralelites/v0.0.4/Build/v0.0.4-rc7.loader.js";
     var config = {
-        arguments: [],
-        dataUrl: "/play/astralelites/v0.0.4/Build/v0.0.4-rc7.data.br",
-        frameworkUrl: "/play/astralelites/v0.0.4/Build/v0.0.4-rc7.framework.js.br",
-        codeUrl: "/play/astralelites/v0.0.4/Build/v0.0.4-rc7.wasm.br",
-        streamingAssetsUrl: "/play/astralelites/v0.0.4/StreamingAssets",
         companyName: "Fydar",
         productName: "Astral Elites",
-        productVersion: "0.04",
+        productVersion: "v0.0.5-rc2",
+        dataUrl: "/play/astralelites/build/v0.0.5-rc2.data.br",
+        codeUrl: "/play/astralelites/build/v0.0.5-rc2.wasm.br",
+        frameworkUrl: "/play/astralelites/build/v0.0.5-rc2.framework.js.br",
+        streamingAssetsUrl: "/play/astralelites/StreamingAssets",
+        arguments: [],
     };
-    serviceWorkerUrl = "/play/astralelites/ServiceWorker.js";
+    var loaderUrl = "/play/astralelites/build/v0.0.5-rc2.loader.js";
+</script>
+
+<EmbedUnity>
+    <Placeholder>
+        <img src="/play/astralelites/favicon.ico" alt="The logo for 'Astral Elites'." style="width: 200px; max-width: 90%; margin-bottom: 32px;" />
+    </Placeholder>
+</EmbedUnity>
+
+<script>
+    var serviceWorkerUrl = "/play/astralelites/ServiceWorker.js";
+    window.addEventListener("load", function () {
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register(serviceWorkerUrl);
+        }
+    });
 </script>

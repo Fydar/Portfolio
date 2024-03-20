@@ -309,6 +309,7 @@ footer {
         position: fixed;
         top: 0;
         transform: translateY(calc(var(--parallax-offset) * var(--parallax-multiplier) * -1px));
+        pointer-events: none;
     }
 
 ::deep .parallax-frame {

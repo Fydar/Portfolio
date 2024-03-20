@@ -23,9 +23,25 @@
 <section class="fullscreen">
     <div class="parallax-frame parallax-focalanchortop" style="--animation-time: 0.5;">
 
-        <video class="parallax-layer" style="--parallax-multiplier: 0.5" autoplay muted loop>
-            <source src="/media/astralelites/background.mp4?v=1" type="video/mp4">
-        </video>
+        <script>
+            var config = {
+                companyName: "Fydar",
+                productName: "Astral Elites",
+                productVersion: "v0.0.5-rc2",
+                dataUrl: "/play/astralelites/build/v0.0.5-rc2.data.br",
+                codeUrl: "/play/astralelites/build/v0.0.5-rc2.wasm.br",
+                frameworkUrl: "/play/astralelites/build/v0.0.5-rc2.framework.js.br",
+                streamingAssetsUrl: "/play/astralelites/StreamingAssets",
+                arguments: ["background"],
+            };
+            var loaderUrl = "/play/astralelites/build/v0.0.5-rc2.loader.js";
+        </script>
+
+        <EmbedUnity class="embed parallax-layer" style="--parallax-multiplier: 0.5">
+            <Placeholder>
+                <img src="/play/astralelites/favicon.ico" alt="The logo for 'Astral Elites'." style="width: 200px; max-width: 90%; margin-bottom: 32px;" />
+            </Placeholder>
+        </EmbedUnity>
 
     </div>
 

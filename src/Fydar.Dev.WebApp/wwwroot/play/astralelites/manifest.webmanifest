@@ -8,10 +8,10 @@
     "description": "",
     "icons": [
         {
-            "src": "v0.0.4/TemplateData/icons/unity-logo-dark.png",
-            "sizes": "144x144",
-            "type": "image/png",
-            "purpose": "any maskable"
+            "src": "favicon.svg",
+            "sizes": "48x48 72x72 96x96 128x128 256x256 512x512",
+            "type": "image/svg+xml",
+            "purpose": "any"
         }
     ]
 }

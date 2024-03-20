@@ -1,0 +1,13 @@
+<svg width="96" height="96" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <path d="M87 56.8034 87 71.8884 48 95 48 79.915ZM9 56.8033 47.9999 79.9149 47.9999 94.9999 9 71.8883ZM47.9999 1 54.3179 22.6979 75.8834 22.3149 58.2226 35.3419 65.233 56.8031 47.9999 43.1563 30.7669 56.8031 37.7773 35.3419 20.1165 22.3149 41.682 22.6979Z" />
+    <style>
+        path {
+            fill: black;
+        }
+        @media (prefers-color-scheme: dark) {
+            path {
+                fill: white;
+            }
+        }
+    </style>
+</svg>
