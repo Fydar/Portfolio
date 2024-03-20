@@ -6,6 +6,7 @@ a {
 
     a:not(.revealed) {
         padding-left: 8px;
+        padding-right: 10px;
         text-decoration: none;
         color: rgb(216, 216, 216);
     }
