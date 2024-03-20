@@ -1,8 +1,8 @@
-<div class="embed" id="@UnityContainer" @attributes="AdditionalAttributes">
+<div class="embed loading" style="--loading-percentage: 0%;" id="@UnityContainer" @attributes="AdditionalAttributes">
     <canvas class="embed-canvas" id="@UnityCanvas" width=960 height=600 tabindex="-1"></canvas>
     <div class="embed-placeholder">
         @Placeholder
-        <div class="progress" role="progressbar">
+        <div class="progress">
             <div class="progress-bar" style="width: var(--loading-percentage);"></div>
         </div>
     </div>
@@ -21,8 +21,9 @@
         var div = document.createElement('div');
         div.innerHTML = msg;
         warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
+        if (type == 'error') {
+            div.style = 'background: red; padding: 10px;';
+        } else {
             if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
             setTimeout(function () {
                 warningBanner.removeChild(div);
@@ -34,19 +35,20 @@
 
     config.showBanner = unityShowBanner;
 
-    container.classList.add("loading");
-
     var script = document.createElement("script");
     script.src = loaderUrl;
+    script.setAttribute("async", "");
     script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-            container.style.setProperty('--loading-percentage', 100 * progress + "%");
-        }).then((unityInstance) => {
-            container.style.setProperty('--loading-percentage', "100%");
-            container.classList.remove("loading");
-        }).catch((message) => {
-            alert(message);
-        });
+        setTimeout(function () {
+            createUnityInstance(canvas, config, (progress) => {
+                container.style.setProperty('--loading-percentage', 100 * progress + "%");
+            }).then((unityInstance) => {
+                container.style.setProperty('--loading-percentage', "100%");
+                container.classList.remove("loading");
+            }).catch((message) => {
+                alert(message);
+            });
+        }, 1);
     };
     document.body.appendChild(script);
 </script>
