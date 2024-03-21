@@ -40,17 +40,18 @@
     ::deep figure.figure-image img {
         display: block;
         margin: auto;
-        max-width: 100%
+        max-width: 100%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
     }
 
     ::deep figure.figure-image figcaption {
         padding: .8em 1rem;
         font-size: 12.6px;
-        background-color: #ffffff0f;
+        background-color: #3d3d3d6e;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
     }
-
 
 ::deep h2 {
     margin-top: 5rem;
@@ -284,6 +285,11 @@ footer {
                     opacity: 1;
                 }
 
+main:has(section.section-feature:last-child) + footer {
+    margin-top: 0;
+}
+
+
 @media print {
     header,
     footer {
@@ -299,6 +305,7 @@ footer {
     width: 100%;
     height: 100%;
     overflow: clip;
+    clip-path: inset(0);
 }
 
     ::deep .parallax-frame .parallax-layer {
@@ -309,10 +316,13 @@ footer {
         position: fixed;
         top: 0;
         transform: translateY(calc(var(--parallax-offset) * var(--parallax-multiplier) * -1px));
-        pointer-events: none;
     }
 
-::deep .parallax-frame {
+        ::deep .parallax-frame .parallax-layer canvas {
+            pointer-events: none;
+        }
+
+::deep .fullscreen .parallax-frame {
     mask: linear-gradient(to top, #00000000 0px, #ffffff 200px, #ffffff);
     animation: landing-fade-in ease 1s;
     animation-iteration-count: 1;
@@ -340,6 +350,49 @@ footer {
     box-sizing: border-box;
 }
 
+
+
+::deep section.section-feature {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: auto [container] 1fr auto;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+    ::deep section.section-feature .parallax-frame {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+    }
+
+
+    ::deep section.section-feature .feature-body {
+        backdrop-filter: blur(12px) brightness(0.525);
+        filter: drop-shadow(0px 1px 3px #0009);
+        font-weight: 400;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        margin-left: 32px;
+        margin-right: 32px;
+        grid-column: container / span 1;
+        box-sizing: border-box;
+        padding: 32px;
+        /* grid-column: 1 / -1; */
+        grid-row: 1 / -1;
+        border-radius: 16px;
+    }
+
+        ::deep section.section-feature .feature-body > *:first-child {
+            margin-top: 0;
+        }
+
+        ::deep section.section-feature .feature-body > *:last-child {
+            margin-bottom: 0;
+        }
+
+
 ::deep .container {
     grid-column: container / span 1;
     width: 100%;
@@ -347,6 +400,10 @@ footer {
     padding-left: 24px;
     padding-right: 24px;
 }
+
+    ::deep .container.container-wide {
+        grid-column: container / span 1;
+    }
 
 ::deep aside {
     grid-column: aside / span 1;
@@ -360,6 +417,11 @@ footer {
         padding-left: 32px;
         padding-right: 32px;
     }
+
+    ::deep section.section-feature .feature-body {
+        margin-left: 32px;
+        margin-right: 32px;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -367,6 +429,11 @@ footer {
     ::deep .container {
         padding-left: 48px;
         padding-right: 48px;
+    }
+
+    ::deep section.section-feature .feature-body {
+        margin-left: 48px;
+        margin-right: 48px;
     }
 
     header,
@@ -389,6 +456,10 @@ footer {
         padding-right: 0;
     }
 
+    ::deep section.section-feature {
+        grid-template-columns: auto [container] 960px auto;
+    }
+
     header,
     main,
     footer {
@@ -400,10 +471,20 @@ footer {
         footer:has(aside) {
             grid-template-columns: auto [aside] 360px [container] 600px auto;
         }
+
+            header:has(aside) ::deep .container.container-wide,
+            main:has(aside) ::deep .container.container-wide,
+            footer:has(aside) ::deep .container.container-wide {
+                grid-column: aside / span 2;
+            }
 }
 
 
 @media screen and (min-width: 1200px) {
+
+    ::deep section.section-feature {
+        grid-template-columns: auto [aside] 430px [container] 710px auto;
+    }
 
     header,
     main,
@@ -420,6 +501,10 @@ footer {
 
 
 @media screen and (min-width: 1400px) {
+
+    ::deep section.section-feature {
+        grid-template-columns: auto [aside] 495px [container] 825px auto;
+    }
 
     header,
     main,
